@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <h1>Cours</h1>
+  <div class="mt-12">
+    <h1>Contact</h1>
   </div>
 </template>
 
@@ -9,7 +9,12 @@
     layout: 'app',
     head () {
       return {
-        title: 'Cours'
+        title: 'Contact'
+      }
+    },
+    data () {
+      return {
+        isOpen : false,
       }
     }
   }
