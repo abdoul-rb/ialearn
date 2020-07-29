@@ -1,6 +1,6 @@
 <template>
   <div class="mt-12">
-    <h1>Conditions générales d'utilisation</h1>
+    <h2 class="text-3xl tracking-tight leading-10 font-extrabold text-gray-900 sm:text-5xl sm:leading-none md:text-5xl">Conditions générales d'utilisation</h2>
   </div>
 </template>
 
