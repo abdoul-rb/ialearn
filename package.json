@@ -1,6 +1,8 @@
 {
   "name": "ialearn",
   "version": "1.0.0",
+  "description": "Plateforme de cours sur l'intelligence artificielle.",
+  "author": "Abdoul Rahim Bah",
   "private": true,
   "scripts": {
     "dev": "nuxt",

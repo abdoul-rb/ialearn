@@ -1,8 +1,6 @@
 <template>
   <main class="max-w-6xl mx-auto">
-    <div>
-      <h3 class="text-2xl md:text-3xl tracking-wider italic text-black">Welcome<span class="font-medium not-italic"> Abdoul Rahim</span></h3>
-    </div>
+    <h3 class="text-2xl md:text-3xl tracking-wider italic text-black">Welcome<span class="font-medium not-italic"> Abdoul Rahim</span></h3>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
       <div class="bg-gray-50 max-w-sm rounded-md overflow-hidden shadow-lg border border-gray-100 p-8">
         <div class="flex items-center justify-between mb-3">
@@ -117,7 +115,7 @@
     layout : 'dashboard',
     head () {
       return {
-        title: 'Dashboard Home'
+        title: 'Tableau de bord'
       }
     }
   }

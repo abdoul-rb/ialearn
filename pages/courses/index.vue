@@ -1,7 +1,7 @@
 <template>
   <div>
-    <h2 class="text-3xl tracking-tight leading-10 font-extrabold text-gray-900 sm:text-5xl sm:leading-none md:text-6xl mb-12">Cours</h2>
-    <div v-for="course in courses" :key="course.id" class="w-full border border-gray-100 shadow-md bg-white rounded-md p-6 mb-3">
+    <h2 class="text-3xl tracking-tight leading-10 font-extrabold tracking-wide text-gray-900 sm:text-4xl sm:leading-none md:text-5xl px-4 md:px-0 md:mb-12">Cours</h2>
+    <div v-for="course in courses" :key="course.id" class="w-full border border-gray-100 shadow-md bg-white rounded-md px-4 py-6 mb-3">
       <h2 class="text-indigo-600 font-medium tracking-wide text-xl mb-2">
         <nuxt-link :to="{ name : 'courses-slug', params : { slug : course.slug }}">{{ course.title }}</nuxt-link>
       </h2>
