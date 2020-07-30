@@ -3,7 +3,6 @@
     <!-- <video autoplay loop poster="https://images.unsplash.com/photo-1496096265110-f83ad7f96608?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" id="bgvid">
       <source :src="require('~/assets/video/ia-movie.mov')" type="video/mov">
     </video> -->
-    <!-- !Responsive -->
     <div class="sm:flex sm:items-center sm:justify-center md:grid md:grid-cols-5 w-full gap-1 mt-12">
       <main class="md:col-span-3 w-full px-4 sm:px-0 pb-12">
         <div class="sm:text-center lg:text-left py-8">
@@ -59,16 +58,12 @@
   </div>
 </template>
 
-<style>
-
-</style>
-
 <script>
 export default {
   layout: 'app',
   head () {
     return {
-      title: 'Homepage'
+      title: 'Accueil'
     }
   },
   data () {
