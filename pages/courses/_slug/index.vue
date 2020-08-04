@@ -59,6 +59,16 @@
                 <span class="block mr-1">4</span> <span>Chapter</span>
               </nuxt-link>
             </li>
+            <li class="mb-2">
+              <nuxt-link to="/" class="rounded-md flex items-center text-md text-indigo-500 font-bold tracking-wide px-3 py-2">
+                <span class="block mr-1">5</span> <span>Chapter</span>
+              </nuxt-link>
+            </li>
+            <li class="mb-2">
+              <nuxt-link to="/" class="rounded-md flex items-center text-md text-indigo-500 font-bold tracking-wide px-3 py-2">
+                <span class="block mr-1">5</span> <span>Chapter</span>
+              </nuxt-link>
+            </li>
           </ul>
         </div>
       </div>
