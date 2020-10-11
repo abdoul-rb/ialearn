@@ -1,21 +1,18 @@
 <template>
-  <div class="mt-12">
-    <!-- <video autoplay loop poster="https://images.unsplash.com/photo-1496096265110-f83ad7f96608?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" id="bgvid">
-      <source :src="require('~/assets/video/ia-movie.mov')" type="video/mov">
-    </video> -->
-    <div class="sm:flex sm:items-center sm:justify-center md:grid md:grid-cols-5 w-full gap-1 mt-12">
-      <main class="md:col-span-3 w-full px-4 sm:px-0 pb-12">
+  <main class="font-montserrat">
+    <div class="sm:flex sm:items-center sm:justify-center md:grid md:grid-cols-5 w-full gap-1 mt-6">
+      <div class="md:col-span-3 w-full px-4 sm:px-0 pb-12">
         <div class="sm:text-center lg:text-left py-8">
           <h2 class="text-3xl tracking-tight leading-10 font-extrabold text-gray-900 sm:text-5xl sm:leading-none md:text-6xl">
             Data to enrich your
             <br class="xl:hidden">
-            <span class="text-indigo-600">online business</span>
+            <span class="text-5xl text-indigo-600">Apprenez en ligne</span>
           </h2>
-          <p class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-            Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.
+          <p class="mt-3 text-gray-900 font-medium sm:mt-5 sm:text-4xl leading-9 sm:max-w-xl sm:mx-auto md:mt-5 lg:mx-0">
+            Inspirez-vous et apprenez quelque chose de nouveau dès aujourd'hui.
           </p>
         </div>
-      </main>
+      </div>
       <img class="col-span-2 hidden md:block object-cover shadow-md rounded-md" src="https://images.unsplash.com/photo-1507146153580-69a1fe6d8aa1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80" alt="Artificial intelligence">
     </div>
     <div class="max-w-full mx-auto mt-12">
@@ -55,7 +52,7 @@
         </div>
       </dl>
     </div>
-  </div>
+  </main>
 </template>
 
 <script>
