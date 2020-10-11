@@ -1,10 +1,10 @@
 <template>
-  <div>
-    <div class="pt-6 px-4 sm:px-6 lg:px-8">
-      <nav class="flex items-center justify-between sm:h-10 lg:justify-start">
+  <div class="bg-gray-100 shadow mb-20 fixed top-0 py-3 w-full z-50 transition-all duration-700">
+    <nav class="px-4 sm:px-6 lg:px-24">
+      <div class="flex items-center justify-between sm:h-10 lg:justify-start pt-1">
         <div class="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
           <div class="flex items-center justify-between w-full md:w-auto">
-            <nuxt-link :to="{ name: 'index' }" aria-label="Home" class="text-2xl text-indigo-600 font-black tracking-wide">iaLEARN</nuxt-link>
+            <nuxt-link :to="{ name: 'index' }" aria-label="Home" class="text-xl text-indigo-600 font-black tracking-wide">ialearn</nuxt-link>
             <div class="-mr-2 flex items-center md:hidden">
               <button @click.prevent="isOpen = true" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out" id="main-menu" aria-label="Main menu" aria-haspopup="true">
                 <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
@@ -17,8 +17,8 @@
         <div class="hidden w-full md:block md:ml-10 md:pr-0" :class=" isOpen ? 'block' : 'hidden' ">
           <div class="relative w-full flex">
             <div class="">
-              <nuxt-link :to="{ name: 'index' }" class="font-medium text-black hover:text-gray-900 transition duration-150 ease-in-out">Accueil</nuxt-link>
-              <nuxt-link :to="{ name: 'courses' }" class="ml-8 font-medium text-black hover:text-gray-900 transition duration-150 ease-in-out">Cours</nuxt-link>
+              <nuxt-link :to="{ name: 'index' }" class="font-medium text-black hover:bg-white transition duration-150 ease-in-out">Accueil</nuxt-link>
+              <nuxt-link :to="{ name: 'courses' }" class="ml-8 font-medium text-black hover:bg-white transition duration-150 ease-in-out">Cours</nuxt-link>
             </div>
             <div class="absolute inset-y-0 right-0">
               <nuxt-link :to="{ name: 'auth-login' }" class="inline w-full px-3 py-2 text-center font-medium shadow rounded text-white text-xs uppercase font-bold bg-indigo-600 hover:bg-indigo-700 hover:text-gray-200 focus:outline-none focus:bg-gray-100 focus:text-indigo-700 transition duration-150 ease-in-out">Se connecter</nuxt-link>
@@ -26,8 +26,8 @@
             </div>
           </div>
         </div>
-      </nav>
-    </div>
+      </div>
+    </nav>
     <transition enter-active-class="duration-150 ease-out"
                 enter-class="opacity-0 scale-95"
                 enter-to-class="opacity-100 scale-100"
@@ -38,7 +38,7 @@
         <div class="rounded-lg shadow-md">
           <div class="rounded-lg bg-white shadow-xs overflow-hidden" role="menu" aria-orientation="vertical" aria-labelledby="main-menu">
             <div class="px-5 pt-4 flex items-center justify-between">
-              <nuxt-link :to="{ name: 'index'}" aria-label="Home" class="text-xl text-indigo-600 font-black tracking-wide">iaLEARN</nuxt-link>
+              <nuxt-link :to="{ name: 'index'}" aria-label="Home" class="text-xl text-indigo-600 font-black tracking-wide">ialearn</nuxt-link>
               <div class="-mr-2">
                 <button @click.prevent="isOpen = false" type="button" class="  inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out" aria-label="Close menu">
                   <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
