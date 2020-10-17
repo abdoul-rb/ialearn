@@ -14,7 +14,7 @@
 
 <script>
   export default {
-    layout: 'student_dashboard',
+    layout: 'student',
     head () {
       return {
 

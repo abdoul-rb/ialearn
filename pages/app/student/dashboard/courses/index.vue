@@ -55,7 +55,7 @@
 
 <script>
   export default {
-    layout: 'student_dashboard',
+    layout: 'student',
     head () {
       return {
         title: 'Tableau de bord - Mes cours'
