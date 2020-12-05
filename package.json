@@ -14,7 +14,10 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.12.2",
     "@tailwindcss/typography": "^0.2.0",
-    "nuxt": "^2.14.6"
+    "animate.css": "^4.1.0",
+    "nuxt": "^2.14.6",
+    "vue": "latest",
+    "vue-js-modal": "^2.0.0-rc.6"
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^2.1.1"

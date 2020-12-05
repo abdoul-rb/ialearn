@@ -1,5 +1,5 @@
 <template>
-  <main class="">
+  <main class="lg:px-20">
     <!-- <div class="w-full">
       <h1 class="text-2xl sm:text-4xl md:text-5xl font-semibold text-indigo-900 md:font-medium tracking-wide leading-tight mb-4 flex items-center px-4 md:px-0">L'intelligence articifielle</h1>
       <div class="flex items-center flex-no-wrap divide-x-2 divide-gray-400 mb-4 overflow-x-hidden">
@@ -11,7 +11,7 @@
         <nuxt-link to="/" class="block w-full bg-indigo-300 shadow rounded-tr-sm rounded-br-sm px-6 py-2"></nuxt-link>
       </div>
     </div> -->
-    <ul class="flex text-gray-500 text-sm lg:text-base mb-6">
+    <ul class="flex text-gray-500 text-sm lg:text-base my-3">
       <li class="inline-flex items-center">
         <nuxt-link :to="{ name: 'index' }">Accueil</nuxt-link>
         <svg class="h-5 w-auto text-gray-400" fill="currentColor" viewBox="0 0 20 20">
@@ -146,11 +146,18 @@
         title: 'Courses de '
       }
     },
+    // props: ['courses'],
     data () {
       return {
         isOpen : false,
-        alreadyWatch : true
+        alreadyWatch : true,
+        course: [
+
+        ]
       }
+    },
+    mounted() {
+      console.log(this.course)
     }
   }
 </script>

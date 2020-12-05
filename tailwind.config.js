@@ -7,11 +7,16 @@
 module.exports = {
   theme: {
     fontFamily: {
-      'montserrat': ['Montserrat', 'sans-serif']
+      'montserrat': ['Montserrat', 'sans-serif'],
+      'courgette': ['Courgette', 'cursive']
     },
     extend: {
       colors: {
         'blue-750': '#003668',
+        'indigo-1': '#6403e4'
+      },
+      maxWidth: {
+        '7xl': '76rem'
       }
     }
   },

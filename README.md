@@ -1,5 +1,9 @@
 # ialearn
 
+```css
+ :style="{'background-image': `url(${require('@/assets/video/farzad-nazifi-p-xSl33Wxyc-unsplash.jpg')})`}"
+```
+
 ## Git
 
 Pour éviter de casser la branche **Master**, la branche principale, nous allons travailler sur une branche enfant de la branche Master.
