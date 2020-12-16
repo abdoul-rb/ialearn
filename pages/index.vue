@@ -1,22 +1,28 @@
 <template>
   <main class="font-montserrat pt-10 sm:pt-12 md:pt-4 lg:px-20">
-    <!-- <login-modal /> -->
-    <div class="sm:flex sm:items-center sm:justify-center md:grid md:grid-cols-5 w-full gap-1 mt-6">
-      <div class="md:col-span-3 w-full px-4 sm:px-0 pb-12">
-        <div class="sm:text-center lg:text-left py-8">
-          <h2 class="text-3xl tracking-tight leading-10 font-extrabold text-gray-900 sm:text-5xl sm:leading-none md:text-6xl">
-            Data to enrich your <br class="xl:hidden">
-            <span class="text-5xl text-indigo-600">Apprenez chaque jours</span>
-          </h2>
-          <p class="text-gray-900 font-medium sm:mt-5 sm:text-4xl leading-9 sm:max-w-xl sm:mx-auto md:mt-5 lg:mx-0 mt-3">
+    <div class="sm:flex sm:items-center sm:justify-center md:grid md:grid-cols-5 gap-4 mt-6">
+      <div class="md:col-span-3 w-full px-4 sm:px-0">
+        <div class="sm:text-center lg:text-left">
+          <span class="inline-flex items-center rounded-full text-xs font-semibold tracking-wide bg-indigo-100 text-indigo-600 px-4 py-1 mb-4">
+            ialearn - apprenez et grandissez !
+          </span>
+          <h2 class="max-w-2xl text-3xl sm:text-5xl font-semibold tracking-10 leading-snug text-gray-900 sm:leading-none">
             Inspirez-vous et apprenez quelque chose de nouveau dès aujourd'hui.
-          </p>
+          </h2>
+          <div class="space-x-4 mt-6">
+            <button type="button" class="inline-flex items-center px-10 py-3 border border-transparent text-base font-medium tracking-wide rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+              Buy now
+            </button>
+            <button type="button" class="inline-flex items-center px-10 py-3 border border-transparent text-base font-medium tracking-wide rounded-md shadow-sm text-black bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+              How it works
+            </button>
+          </div>
         </div>
       </div>
       <img class="col-span-2 hidden md:block object-cover shadow-md rounded-md" src="https://images.unsplash.com/photo-1507146153580-69a1fe6d8aa1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80" alt="Artificial intelligence">
     </div>
     <!--  Stat blocks -->
-    <div class="max-w-full mx-auto mt-12">
+    <div class="max-w-full mx-auto mt-12 py-2">
       <dl class="rounded-lg bg-gray-100 shadow sm:grid sm:grid-cols-3">
         <div class="flex flex-col border-b border-gray-300 p-6 text-center sm:border-0 sm:border-r">
           <dt id="item-1" class="order-2 mt-2 text-sm leading-6 font-medium text-indigo-700 uppercase">Unviersités</dt>
@@ -68,8 +74,7 @@
     },
     data () {
       return {
-        isOpen : false,
       }
-    }
+    },
   }
 </script>

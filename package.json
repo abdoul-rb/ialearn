@@ -12,6 +12,7 @@
     "serve": "nuxt serve"
   },
   "dependencies": {
+    "@nuxtjs/auth": "^4.9.1",
     "@nuxtjs/axios": "^5.12.2",
     "@tailwindcss/typography": "^0.2.0",
     "animate.css": "^4.1.0",
@@ -20,6 +21,11 @@
     "vue-js-modal": "^2.0.0-rc.6"
   },
   "devDependencies": {
-    "@nuxtjs/tailwindcss": "^2.1.1"
+    "@nuxtjs/dotenv": "^1.4.1",
+    "@nuxtjs/tailwindcss": "^3.3.4",
+    "@tailwindcss/postcss7-compat": "^2.0.2",
+    "autoprefixer": "^9.8.6",
+    "postcss": "^7.0.34",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.2"
   }
 }

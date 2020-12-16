@@ -4,16 +4,22 @@
 ** Docs: https://tailwindcss.com/docs/configuration
 ** Default: https://github.com/tailwindcss/tailwindcss/blob/master/stubs/defaultConfig.stub.js
 */
+const colors = require('tailwindcss/colors')
 module.exports = {
   theme: {
     fontFamily: {
       'montserrat': ['Montserrat', 'sans-serif'],
-      'courgette': ['Courgette', 'cursive']
+      'courgette': ['Courgette', 'cursive'],
+      'nunito': ['Nunito', 'sans-serif'],
     },
     extend: {
       colors: {
         'blue-750': '#003668',
-        'indigo-1': '#6403e4'
+        'indigo-1': '#6403e4',
+        'blue-90': '#242254',
+        'pink-90': '#f3bdd7',
+        'fuchsia-90': '#c7a3d8',
+        cyan: colors.cyan,
       },
       maxWidth: {
         '7xl': '76rem'

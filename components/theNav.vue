@@ -40,7 +40,7 @@
             <div class="px-5 pt-4 flex items-center justify-between">
               <nuxt-link :to="{ name: 'index'}" aria-label="Home" class="text-xl text-indigo-1 font-black tracking-wide">ialearn</nuxt-link>
               <div class="-mr-2">
-                <button @click.prevent="isOpen = false" type="button" class="  inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out" aria-label="Close menu">
+                <button @click.prevent="isOpen = false" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out" aria-label="Close menu">
                   <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                   </svg>
