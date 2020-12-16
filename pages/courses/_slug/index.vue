@@ -25,17 +25,17 @@
         </svg>
       </li>
       <li class="inline-flex items-center">
-        <nuxt-link :to="{ name: '' }" class="text-indigo-400">Apprendre l'intélligence articielle</nuxt-link>
+        <nuxt-link :to="{ name: '' }" class="text-blue-90">{{ course.title || 'Titre' }}</nuxt-link>
       </li>
     </ul>
     <section class="grid grid-cols-1 lg:grid-cols-3 gap-16">
       <article class="">
-        <ul class="list-none mt-24 space-y-2">
-          <li class="">
-            <nuxt-link :to="{ name: '' }" class="flex items-center justify-between bg-blue-500 text-sm text-white font-medium tracking-wide rounded-lg px-6 py-3">
+        <ul class="list-none mt-16 space-y-2">
+          <li class="" v-for="(chapter, index) in course.chapters" :key="chapter.id">
+            <button @click.prevent="switchChapters(index)" class="w-full flex items-center justify-between bg-blue-90 text-sm text-white font-medium tracking-wide rounded-lg focus:outline-none px-6 py-3">
               <div class="flex items-center space-x-2">
-                <span class="inline-flex items-center justify-center bg-blue-700 w-6 h-6 rounded-full">1</span>
-                <span class="block">First chapter</span>
+                <span class="inline-flex items-center justify-center bg-fuchsia-90 w-6 h-6 rounded-full">{{ index + 1 }}</span>
+                <span class="block">{{ chapter.title || 'Titre chapitre'}}</span>
               </div>
               <template>
                 <div v-if="alreadyWatch">
@@ -49,88 +49,19 @@
                   </svg>
                 </div>
               </template>
-            </nuxt-link>
-          </li>
-          <li class="">
-            <nuxt-link :to="{ name: '' }" class="flex items-center justify-between bg-blue-500 text-sm text-white font-medium tracking-wide rounded-lg px-6 py-3">
-              <div class="flex items-center space-x-2">
-                <span class="inline-flex items-center justify-center bg-blue-700 w-6 h-6 rounded-full">2</span>
-                <span class="block">Second chapter</span>
-              </div>
-              <template>
-                <div v-if="!alreadyWatch">
-                  <svg class="stroke-current text-white w-4 h-auto mr-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon>
-                  </svg>
-                </div>
-                <div v-else>
-                  <svg class="stroke-current text-white w-4 h-auto mr-3" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 9.9-1"></path>
-                  </svg>
-                </div>
-              </template>
-            </nuxt-link>
-          </li>
-          <li class="">
-            <nuxt-link :to="{ name: '' }" class="flex items-center justify-between bg-blue-500 text-sm text-white font-medium tracking-wide rounded-lg px-6 py-3">
-              <div class="flex items-center space-x-2">
-                <span class="inline-flex items-center justify-center bg-blue-700 w-6 h-6 rounded-full">3</span>
-                <span class="block">Third chapter</span>
-              </div>
-              <template>
-                <div v-if="!alreadyWatch">
-                  <svg class="stroke-current text-white w-4 h-auto mr-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon>
-                  </svg>
-                </div>
-                <div v-else>
-                  <svg class="stroke-current text-white w-4 h-auto mr-3" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 9.9-1"></path>
-                  </svg>
-                </div>
-              </template>
-            </nuxt-link>
+            </button>
           </li>
         </ul>
       </article>
       <aside class="lg:col-span-2 pb-12">
         <div class="">
           <h1 class="text-3xl text-gray-900 font-medium leading-tight mb-5 flex items-center">
-            Using the Nuxt fetch method for effortless API sorting and filtering
+            {{ course.title || 'Titre cours'}}
           </h1>
           <div class="w-full text-lg">
-            <h1 class="text-2xl text-gray-700 font-medium leading-tight my-3">
-              Premier chapitre
-            </h1>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, consectetur, itaque! Beatae cupiditate dolores id maiores maxime minima, qui quibusdam repellendus sequi soluta unde, voluptas voluptate, voluptates? Excepturi odio, repellendus?
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, consectetur, itaque! Beatae cupiditate dolores id maiores maxime minima, qui quibusdam repellendus sequi soluta unde, voluptas voluptate, voluptates? Excepturi odio, repellendus?
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, consectetur, itaque! Beatae cupiditate dolores id maiores maxime minima, qui quibusdam repellendus sequi soluta unde, voluptas voluptate, voluptates? Excepturi odio, repellendus?
-            </p>
+            <h1 class="text-2xl text-gray-700 font-medium leading-tight my-3">{{ course.chapters[this.currentKey].title || 'Titre chapitre en cours'}}</h1>
+            <p>{{ course.chapters[this.currentKey].content || 'Contenu cours' }}</p>
             <img src="https://images.unsplash.com/photo-1571260899304-425eee4c7efc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" alt="" class="w-full rounded object-cover my-6">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, consectetur, itaque! Beatae cupiditate dolores id maiores maxime minima, qui quibusdam repellendus sequi soluta unde, voluptas voluptate, voluptates? Excepturi odio, repellendus?
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, consectetur, itaque! Beatae cupiditate dolores id maiores maxime minima, qui quibusdam repellendus sequi soluta unde, voluptas voluptate, voluptates? Excepturi odio, repellendus?
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, consectetur, itaque! Beatae cupiditate dolores id maiores maxime minima, qui quibusdam repellendus sequi soluta unde, voluptas voluptate, voluptates? Excepturi odio, repellendus?
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, consectetur, itaque! Beatae cupiditate dolores id maiores maxime minima, qui quibusdam repellendus sequi soluta unde, voluptas voluptate, voluptates? Excepturi odio, repellendus?
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, consectetur, itaque! Beatae cupiditate dolores id maiores maxime minima, qui quibusdam repellendus sequi soluta unde, voluptas voluptate, voluptates? Excepturi odio, repellendus?
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, consectetur, itaque! Beatae cupiditate dolores id maiores maxime minima, qui quibusdam repellendus sequi soluta unde, voluptas voluptate, voluptates? Excepturi odio, repellendus?
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, consectetur, itaque! Beatae cupiditate dolores id maiores maxime minima, qui quibusdam repellendus sequi soluta unde, voluptas voluptate, voluptates? Excepturi odio, repellendus?
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, consectetur, itaque! Beatae cupiditate dolores id maiores maxime minima, qui quibusdam repellendus sequi soluta unde, voluptas voluptate, voluptates? Excepturi odio, repellendus?
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, consectetur, itaque! Beatae cupiditate dolores id maiores maxime minima, qui quibusdam repellendus sequi soluta unde, voluptas voluptate, voluptates? Excepturi odio, repellendus?
-            </p>
           </div>
         </div>
       </aside>
@@ -140,24 +71,36 @@
 
 <script>
   export default {
+    middleware: ['auth'],
     layout: 'app',
     head () {
       return {
         title: 'Courses de '
       }
     },
-    // props: ['courses'],
     data () {
       return {
         isOpen : false,
         alreadyWatch : true,
-        course: [
-
-        ]
+        currentKey: 0,
+        course: null,
+      }
+    },
+    methods: {
+      switchChapters(index) {
+        this.currentKey = index
       }
     },
     mounted() {
       console.log(this.course)
+    },
+    async asyncData({ params, app }) {
+      try {
+        let course = await app.$axios.$get(`admin/courses/${params.slug}`)
+        return { course : course.data }
+      } catch (e) {
+        console.log(e)
+      }
     }
   }
 </script>
