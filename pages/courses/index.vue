@@ -1,15 +1,35 @@
 <template>
-  <div>
-    <h2 class="text-3xl tracking-tight leading-10 font-extrabold tracking-wide text-gray-900 sm:text-4xl sm:leading-none md:text-5xl px-4 md:px-0 md:mb-12">Cours</h2>
-    <div v-for="course in courses" :key="course.id" class="w-full border border-gray-100 shadow-md bg-white rounded-md px-4 py-6 mb-3">
-      <h2 class="text-indigo-600 font-medium tracking-wide text-xl mb-2">
-        <nuxt-link :to="{ name : 'courses-slug', params : { slug : course.slug }}">{{ course.title }}</nuxt-link>
-      </h2>
-      <nuxt-link :to="{ name : 'courses-slug', params : { slug : course.slug }}">
-        <p>{{ course.content }}</p>
+  <main class="grid lg:grid-cols-12 gap-8 lg:px-20 mt-12">
+    <div class="lg:col-span-2">
+      <h1 class="text-lg text-blue-90 font-medium hover:bg-gray-100 hover:rounded leading-5 px-2 py-1">Nos formations</h1>
+    </div>
+    <div class="lg:col-span-8 grid lg:grid-cols-2 gap-4 mt-3">
+      <nuxt-link :to="{ name: 'courses-slug', params: { slug: course.slug } }" v-for="course in courses" :key="course.id" class="rounded shadow bg-blue-500 transform hover:-translate-y-2 transition transition-all duration-500 px-8 py-6">
+        <div class="w-64 space-y-2 text-white mb-3">
+          <h4 class="text-xl font-medium leading-7">{{ course.title }}</h4>
+          <div class="flex items-center space-x-4">
+            <div class="flex items-center space-x-1">
+              <svg class="stroke-current text-indigo-700 w-4 h-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline>
+              </svg>
+              <h5 class="text-xs font-medium uppercase">12 lessons</h5>
+            </div>
+            <div class="flex items-center space-x-1">
+              <svg class="stroke-current text-indigo-700 w-4 h-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              <h5 class="text-xs font-medium uppercase">3h 30min</h5>
+            </div>
+          </div>
+        </div>
+        <p class="text-sm text-gray-200 mt-2">{{ course.description }}</p>
+        <div class="flex items-center justify-end mt-8">
+          <nuxt-link :to="{ name: 'courses-slug', params: { slug: course.slug } }" class="rounded-full bg-blue-700 text-xs text-white font-semibold uppercase tracking-wide px-8 py-3">&rarr; Découvrir</nuxt-link>
+        </div>
       </nuxt-link>
     </div>
-  </div>
+    <div class="lg:col-span-1"></div>
+  </main>
 </template>
 
 <script>
@@ -20,28 +40,18 @@
         title: 'Cours'
       }
     },
-    data () {
+    data() {
       return {
-        courses : [
-          {
-            id: 1,
-            slug: 'learn-artificial-inteligence',
-            title: 'Learn artificial inteligence',
-            content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus amet aspernatur dolore explicabo ipsa ipsum magnam minima minus nisi non nulla omnis, optio placeat praesentium quae quod unde ut?\n.     Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus amet aspernatur dolore explicabo ipsa ipsum magnam minima minus nisi non nulla omnis, optio placeat praesentium quae quod unde ut?\n'
-          },
-          {
-            id: 2,
-            slug: 'apprendre-intelligence-artificielle',
-            title: 'Apprendre l\'intelligence artificielle',
-            content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus amet aspernatur dolore explicabo ipsa ipsum magnam minima minus nisi non nulla omnis, optio placeat praesentium quae quod unde ut?\n.     Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus amet aspernatur dolore explicabo ipsa ipsum magnam minima minus nisi non nulla omnis, optio placeat praesentium quae quod unde ut?\n'
-          }
-        ]
+        courses: [],
       }
     },
-    computed: {
-      course () {
-        return this.courses.find(course => course.slug === this.slug)
+    async asyncData(context) {
+      try {
+        let courses = await context.$axios.$get('admin/courses')
+        return { courses : courses.data }
+      } catch (e) {
+        console.log(e)
       }
-    }
+    },
   }
 </script>

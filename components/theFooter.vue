@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-indigo-600">
+  <div class="bg-indigo-1">
     <div class="max-w-screen-xl mx-auto py-4 px-4 sm:px-6 md:flex md:flex-col md:items-center md:justify-between lg:px-8">
       <div class="flex justify-center items-center md:order-1">
         <nuxt-link :to="{ name: 'cgu' }" class="hidden md:block text-xs font-medium text-white hover:underline">Conditions générales d'utilisation</nuxt-link>
