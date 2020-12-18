@@ -11,10 +11,10 @@
           </h2>
           <div class="space-x-4 mt-6">
             <button type="button" class="inline-flex items-center px-10 py-3 border border-transparent text-base font-medium tracking-wide rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-              Buy now
+              Suivre un cours
             </button>
             <button type="button" class="inline-flex items-center px-10 py-3 border border-transparent text-base font-medium tracking-wide rounded-md shadow-sm text-black bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-              How it works
+              En savoir plus
             </button>
           </div>
         </div>
