@@ -40,12 +40,12 @@
         title: 'Cours'
       }
     },
-    data () {
+    data() {
       return {
         courses: [],
       }
     },
-    async asyncData (context) {
+    async asyncData(context) {
       try {
         let courses = await context.$axios.$get('admin/courses')
         return { courses : courses.data }
