@@ -64,7 +64,7 @@
         </div>
       </main>
       <!-- Block stats -->
-      <div class="max-w-6xl mt-16 py-2 mx-10">
+      <div class="max-w-6xl mx-auto mt-16 py-2 mx-10">
         <dl class="rounded-lg bg-gray-50 shadow sm:grid sm:grid-cols-3">
           <div class="flex flex-col border-b border-gray-200 p-6 text-center sm:border-0 sm:border-r">
             <dt id="item-1" class="order-2 mt-2 text-sm leading-6 font-medium text-indigo-700 uppercase">Unviersités</dt>
