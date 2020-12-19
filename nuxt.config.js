@@ -40,6 +40,7 @@ export default {
   plugins: [
    // '~plugins/vue-js-modal.js',
     '~plugins/modal.js',
+    '~/plugins/vue2-filters'
   ],
   /*
   ** Auto import components

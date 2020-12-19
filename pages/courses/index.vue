@@ -12,7 +12,7 @@
               <svg class="stroke-current text-indigo-700 w-4 h-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline>
               </svg>
-              <h5 class="text-xs font-medium uppercase">12 lessons</h5>
+              <h5 class="text-xs font-medium uppercase">{{ course.chapters.length }} chaptitres</h5>
             </div>
             <div class="flex items-center space-x-1">
               <svg class="stroke-current text-indigo-700 w-4 h-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -22,7 +22,7 @@
             </div>
           </div>
         </div>
-        <p class="text-sm text-gray-200 mt-2">{{ course.description }}</p>
+        <p class="text-sm text-gray-200 mt-2">{{ course.description | truncate(170) }}</p>
         <div class="flex items-center justify-end mt-8">
           <nuxt-link :to="{ name: 'courses-slug', params: { slug: course.slug } }" class="rounded-full bg-blue-700 text-xs text-white font-semibold uppercase tracking-wide px-8 py-3">&rarr; Découvrir</nuxt-link>
         </div>
@@ -33,11 +33,13 @@
 </template>
 
 <script>
+  import Vue2Filters from 'vue2-filters'
   export default {
+    mixins: [Vue2Filters.mixin],
     layout: 'app',
     head () {
       return {
-        title: 'Cours'
+        title: 'Toutes nos formations'
       }
     },
     data() {
