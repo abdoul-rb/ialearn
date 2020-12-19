@@ -1,6 +1,6 @@
 <template>
   <div class="relative z-20 pt-4 pb-4 font-nunito">
-    <div class="max-w-6xl mx-auto px-4 sm:px-0">
+    <div class="max-w-6xl mx-auto px-4 sm:px-12 md:px-0 xl:px-0">
       <nav class="relative flex items-center justify-between sm:h-6 md:justify-center">
         <div class="flex items-center flex-1 md:absolute md:inset-y-0 md:left-0">
           <div class="flex items-center justify-between w-full md:w-auto">
@@ -61,11 +61,11 @@
     </div>
     <div class="max-w-6xl mx-auto border-b border-gray-300 mt-2"></div>
     <div class="max-w-6xl mx-auto mt-3">
-      <div class="hidden md:block space-x-6">
-          <nuxt-link :to=" { name : '' } " class="text-gray-900 text-md font-bold italic tracking-wide hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out">Universités</nuxt-link>
+      <div class="hidden md:block space-x-10">
+          <nuxt-link :to=" { name : '' } " class="text-gray-500 text-md font-semibold italic tracking-wide hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out">Universités</nuxt-link>
           <span class="border-l border-gray-500 px-1"></span>
-          <nuxt-link :to=" { name : 'index' } " class="text-gray-900 text-md font-bold tracking-wide hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out">Accueil</nuxt-link>
-          <nuxt-link :to=" { name : 'courses' } " class="text-gray-900 text-md font-bold tracking-wide hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out">Cours</nuxt-link>
+          <nuxt-link :to=" { name : 'index' } " class="text-gray-500 text-md font-semibold tracking-wide hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out">Accueil</nuxt-link>
+          <nuxt-link :to=" { name : 'courses' } " class="text-gray-500 text-md font-semibold tracking-wide hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out">Cours</nuxt-link>
         </div>
     </div>
     <!-- Hamburger Menu - Responsive mobile -->
