@@ -1,7 +1,7 @@
 <template>
-  <main class="grid lg:grid-cols-12 gap-8 md:px-20 mt-12">
+  <main class="grid lg:grid-cols-12 gap-8 px-4 md:px-20 mt-12">
     <div class="lg:col-span-2">
-      <h1 class="text-lg text-blue-90 font-medium hover:bg-gray-100 hover:rounded leading-5 px-2 py-1">Nos formations</h1>
+      <h1 class="text-3xl md:text-lg text-gray-900 font-medium hover:bg-gray-100 hover:rounded leading-5 px-2 py-1">Nos formations</h1>
     </div>
     <div class="lg:col-span-8 grid lg:grid-cols-2 gap-4 mt-3">
       <nuxt-link :to="{ name: 'courses-slug', params: { slug: course.slug } }" v-for="course in courses" :key="course.id" class="rounded shadow bg-blue-500 transform hover:-translate-y-2 transition transition-all duration-500 px-8 py-6">

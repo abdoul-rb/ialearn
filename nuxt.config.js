@@ -63,10 +63,9 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
   ],
-
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {
-    baseURL: process.env.BASE_URL || 'http://localhost:8000/api'
+    baseURL: process.env.API_URL || 'http://localhost:8000/api'
   },
   auth: {
     strategies: {
@@ -79,7 +78,7 @@ export default {
       }
     },
     redirect : {
-      login : '/auth/register',
+      login : '/auth/login',
     },
   },
   /*
