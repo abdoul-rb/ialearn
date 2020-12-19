@@ -1,5 +1,5 @@
 <template>
-  <main class="grid lg:grid-cols-12 gap-8 lg:px-20 mt-12">
+  <main class="grid lg:grid-cols-12 gap-8 md:px-20 mt-12">
     <div class="lg:col-span-2">
       <h1 class="text-lg text-blue-90 font-medium hover:bg-gray-100 hover:rounded leading-5 px-2 py-1">Nos formations</h1>
     </div>
