@@ -26,12 +26,10 @@
               Inspirez-vous et apprenez quelque chose de nouveau dès aujourd'hui.
             </p>
             <div class="mt-8 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0">
-              <p class="text-base font-medium text-gray-900">
-                Commencez dès maintenant.
-              </p>
-              <div class="sm:mt-2 sm:flex">
-                <button type="submit" class="mt-3 w-full px-10 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-800 shadow-sm hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:flex-shrink-0 sm:inline-flex sm:items-center sm:w-auto">
-                  Commencer un cours
+              <p class="text-base font-medium text-gray-900">Commencez dès maintenant.</p>
+              <div class="sm:mt-2 sm:flex sm:justify-center md:justify-start">
+                <button class="mt-3 w-full px-10 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-800 shadow-sm hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:flex-shrink-0 sm:inline-flex sm:items-center sm:w-auto">
+                  Apprendre un cours
                 </button>
               </div>
               <p class="mt-3 text-sm text-gray-500">
@@ -65,6 +63,7 @@
           </div>
         </div>
       </main>
+      <!-- Block stats -->
       <div class="max-w-6xl mt-16 py-2 mx-10">
         <dl class="rounded-lg bg-gray-50 shadow sm:grid sm:grid-cols-3">
           <div class="flex flex-col border-b border-gray-200 p-6 text-center sm:border-0 sm:border-r">

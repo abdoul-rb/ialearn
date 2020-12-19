@@ -1,5 +1,5 @@
 <template>
-  <div class="relative z-20 pt-4 pb-4 font-nunito">
+  <div class="relative z-20 py-4 font-nunito">
     <div class="max-w-6xl mx-auto px-4 sm:px-12 md:px-0 xl:px-0">
       <nav class="relative flex items-center justify-between sm:h-6 md:justify-center">
         <div class="flex items-center flex-1 md:absolute md:inset-y-0 md:left-0">

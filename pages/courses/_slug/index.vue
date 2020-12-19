@@ -1,17 +1,7 @@
 <template>
-  <main class="lg:px-20">
-    <!-- <div class="w-full">
-      <h1 class="text-2xl sm:text-4xl md:text-5xl font-semibold text-indigo-900 md:font-medium tracking-wide leading-tight mb-4 flex items-center px-4 md:px-0">L'intelligence articifielle</h1>
-      <div class="flex items-center flex-no-wrap divide-x-2 divide-gray-400 mb-4 overflow-x-hidden">
-        <nuxt-link to="/" class="block w-full bg-indigo-300 shadow rounded-tl-sm rounded-bl-sm px-6 py-2"></nuxt-link>
-        <nuxt-link to="/" class="block w-full bg-indigo-300 shadow px-6 py-2"></nuxt-link>
-        <nuxt-link to="/" class="block w-full bg-indigo-300 shadow px-6 py-2"></nuxt-link>
-        <nuxt-link to="/" class="block w-full bg-indigo-300 shadow px-6 py-2"></nuxt-link>
-        <nuxt-link to="/" class="block w-full bg-indigo-300 shadow px-6 py-2"></nuxt-link>
-        <nuxt-link to="/" class="block w-full bg-indigo-300 shadow rounded-tr-sm rounded-br-sm px-6 py-2"></nuxt-link>
-      </div>
-    </div> -->
-    <ul class="flex text-gray-500 text-sm lg:text-base my-3">
+  <main class="px-12 md:px-24 lg:px-20">
+     <!-- Left Navigation courses -->
+    <ul class="flex text-gray-500 text-sm lg:text-base md:my-3">
       <li class="inline-flex items-center">
         <nuxt-link :to="{ name: 'index' }">Accueil</nuxt-link>
         <svg class="h-5 w-auto text-gray-400" fill="currentColor" viewBox="0 0 20 20">
@@ -30,12 +20,12 @@
     </ul>
     <section class="grid grid-cols-1 lg:grid-cols-3 gap-16">
       <article class="">
-        <ul class="list-none mt-16 space-y-2">
+        <ul class="list-none mt-10 md:mt-16 space-y-2">
           <li class="" v-for="(chapter, index) in course.chapters" :key="chapter.id">
             <button @click.prevent="switchChapters(index)" class="w-full flex items-center justify-between bg-blue-90 text-sm text-white font-medium tracking-wide rounded-lg focus:outline-none px-6 py-3">
-              <div class="flex items-center space-x-2">
+              <div class="flex items-center text-left space-x-2">
                 <span class="inline-flex items-center justify-center bg-fuchsia-90 w-6 h-6 rounded-full">{{ index + 1 }}</span>
-                <span class="block">{{ chapter.title || 'Titre chapitre'}}</span>
+                <span class="inline-flex">{{ chapter.title | truncate(26) }}</span>
               </div>
               <template>
                 <div v-if="alreadyWatch">
@@ -55,12 +45,10 @@
       </article>
       <aside class="lg:col-span-2 pb-12">
         <div class="">
-          <h1 class="text-3xl text-gray-900 font-medium leading-tight mb-5 flex items-center">
-            {{ course.title || 'Titre cours'}}
-          </h1>
+          <h1 class="text-2xl md:text-3xl text-gray-900 font-medium leading-tight flex items-center mb-5">{{ course.title }}</h1>
           <div class="w-full text-lg">
-            <h1 class="text-2xl text-gray-700 font-medium leading-tight my-3">{{ course.chapters[this.currentKey].title || 'Titre chapitre en cours'}}</h1>
-            <p>{{ course.chapters[this.currentKey].content || 'Contenu cours' }}</p>
+            <h1 class="text-2xl text-gray-700 font-medium leading-tight my-3">{{ course.chapters[this.currentKey].title }}</h1>
+            <p class="prose prose-indigo prose-sm sm:prose lg:prose-lg">{{ course.chapters[this.currentKey].content }}</p>
             <img src="https://images.unsplash.com/photo-1571260899304-425eee4c7efc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" alt="" class="w-full rounded object-cover my-6">
           </div>
         </div>
@@ -70,12 +58,14 @@
 </template>
 
 <script>
+  import Vue2Filters from 'vue2-filters'
   export default {
+    mixins: [Vue2Filters.mixin],
     middleware: ['auth'],
     layout: 'app',
     head () {
       return {
-        title: 'Courses de '
+        title: this.course.title,
       }
     },
     data () {

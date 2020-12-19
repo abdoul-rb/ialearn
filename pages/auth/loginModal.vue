@@ -67,11 +67,7 @@
           setTimeout(() => {
             this.$modal.hide('LoginModal')
           },200)
-          if ($nuxt.$route.name == 'courses') {
-            this.$router.push({ name : 'courses', params: { slug: course.slug } })
-          } else {
-            this.$router.push({ name : 'courses' })
-          }
+          // if ($nuxt.$route.name == 'courses') { this.$router.push({ name : 'courses' }) }
         } catch (e) {
           console.log(e.response.data)
           if (e.response.status === 422) {
