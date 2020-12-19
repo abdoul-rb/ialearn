@@ -100,7 +100,7 @@
             </div>
           </div>
           <div>
-            <button @click.prevent="$modal.show('LoginModal')" class="block w-full px-5 py-3 text-center font-medium text-indigo-600 bg-gray-50 hover:bg-gray-100 hover:text-indigo-700 focus:outline-none focus:bg-gray-100 focus:text-indigo-700 transition duration-150 ease-in-out">
+            <button v-if="!$auth.loggedIn" @click.prevent="$modal.show('LoginModal')" class="block w-full px-5 py-3 text-center font-medium text-indigo-600 bg-gray-50 hover:bg-gray-100 hover:text-indigo-700 focus:outline-none focus:bg-gray-100 focus:text-indigo-700 transition duration-150 ease-in-out">
               Se connecter
             </button>
           </div>
