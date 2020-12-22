@@ -1,5 +1,5 @@
 <template>
-  <main class="px-12 md:px-24 lg:px-20">
+  <main class="px-8 md:px-24 lg:px-20">
      <!-- Left Navigation courses -->
     <ul class="flex text-gray-500 text-sm lg:text-base md:my-3">
       <li class="inline-flex items-center">
@@ -81,9 +81,7 @@
         this.currentKey = index
       }
     },
-    mounted() {
-      console.log(this.course)
-    },
+    mounted() {},
     async asyncData({ params, app }) {
       try {
         let course = await app.$axios.$get(`admin/courses/${params.slug}`)
