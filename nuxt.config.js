@@ -62,6 +62,7 @@ export default {
     '@nuxtjs/auth',
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
+    '@nuxtjs/proxy',
   ],
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {
