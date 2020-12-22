@@ -65,7 +65,7 @@ export default {
   ],
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {
-    baseURL: process.env.API_URL || 'http://localhost:8000/api',
+    prefix: process.env.API_URL || 'http://localhost:8000/api',
     proxy: { 'admin/courses': process.env.API_URL + '/admin/courses'}
   },
   auth: {
