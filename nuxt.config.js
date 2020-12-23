@@ -69,12 +69,6 @@ export default {
     prefix: process.env.API_URL || 'http://localhost:8000/api',
     proxy: true
   },
-  proxy: {
-    'admin/courses': {
-      target: process.env.API_URL + '/admin/courses',
-      changeOrigin: true
-    }
-  },
   auth: {
     strategies: {
       local:{

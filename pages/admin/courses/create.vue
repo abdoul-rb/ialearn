@@ -98,7 +98,7 @@
     methods: {
       async submit() {
         try {
-          await this.$axios.post('admin/courses/', this.form)
+          await this.$axios.post('admin/courses', this.form)
           // this.resetForm()
           // this.$router.push({ name : 'admin-courses-create' })
         } catch (e) {
