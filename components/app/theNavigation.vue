@@ -62,7 +62,7 @@
     <div class="max-w-6xl mx-auto border-b border-gray-300 mt-2"></div>
     <div class="max-w-6xl mx-auto mt-3">
       <div class="hidden md:block space-x-10">
-          <nuxt-link :to=" { name : '' } " class="text-gray-500 text-md font-semibold italic tracking-wide hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out">Universités</nuxt-link>
+          <nuxt-link :to=" { name : 'pro' } " class="text-gray-500 text-md font-semibold italic tracking-wide hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out">Universités</nuxt-link>
           <span class="border-l border-gray-500 px-1"></span>
           <nuxt-link :to=" { name : 'index' } " class="text-gray-500 text-md font-semibold tracking-wide hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out">Accueil</nuxt-link>
           <nuxt-link :to=" { name : 'courses' } " class="text-gray-500 text-md font-semibold tracking-wide hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out">Cours</nuxt-link>
@@ -85,7 +85,7 @@
             </div>
           </div>
           <div class="px-2 pt-2 pb-8 font-nunito">
-            <nuxt-link :to=" { name : '' } " class="block rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out px-3 py-2">Universités</nuxt-link>
+            <nuxt-link :to=" { name : 'pro' } " class="block rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out px-3 py-2">Universités</nuxt-link>
             <nuxt-link :to=" { name : 'index' } " class="block rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out px-3 py-2">Accueil</nuxt-link>
             <nuxt-link :to=" { name : 'courses' } " class="block rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out px-3 py-2">Cours</nuxt-link>
             <!-- User profile on mobile menu -->
