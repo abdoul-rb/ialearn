@@ -61,13 +61,11 @@ export default {
     '@nuxtjs/dotenv',
     '@nuxtjs/auth',
     // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/axios',
-    '@nuxtjs/proxy',
+    '@nuxtjs/axios'
   ],
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {
-    prefix: process.env.API_URL || 'http://localhost:8000/api',
-    proxy: true
+    baseURL: process.env.API_URL || 'http://localhost:8000/api',
   },
   auth: {
     strategies: {
