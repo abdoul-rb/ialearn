@@ -69,7 +69,7 @@ export default {
   },
   auth: {
     strategies: {
-      local:{
+      local: {
         endpoints : {
           login : { url : 'auth/login', method : 'post', propertyName : 'access_token' },
           logout: { url: 'auth/logout', method: 'post' },

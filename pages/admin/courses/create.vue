@@ -47,24 +47,13 @@
                   <p class="mt-1 text-sm text-gray-500">Un cours peut avoir un à plusieurs chapitres.</p>
                 </div>
                 <div class="grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6 mt-6">
-                  <div class="sm:col-span-4">
-                    <label for="title" class="block text-sm font-medium text-gray-700">Titre du cours</label>
-                    <div class="mt-1">
-                      <input type="text" name="title" id="title" v-model="form.title" autocomplete="given-name" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md">
-                    </div>
-                  </div>
-                  <div class="sm:col-span-6">
-                    <label for="content" class="block text-sm font-medium text-gray-700">Description</label>
-                    <div class="mt-1">
-                      <textarea id="content" name="content" v-model="form.description" rows="8" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"></textarea>
-                    </div>
-                  </div>
+                  <!-- Form input -->
                 </div>
               </div>
               <div class="pt-5">
                 <div class="flex justify-end space-x-2">
                   <PrimaryButton>Annuler</PrimaryButton>
-                  <CyanButton :type="'submit'">Ajouter le chapitre</CyanButton>
+                  <CyanButton :type="submit">Ajouter le chapitre</CyanButton>
                 </div>
               </div>
             </div>
