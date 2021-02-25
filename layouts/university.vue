@@ -1,9 +1,8 @@
 <template>
-  <div class="min-h-screen bg-gray-100 overflow-hidden">
+  <div class="bg-gray-100 overflow-hidden">
     <the-navigation />
-    <div class="sm:flex min-h-screen">
-      <div class="w-9/12 shadow px-20 py-10">
-        <!-- <div class="bg-indigo-500 h-48 shadow-md rounded-lg sm mb-4  border border-red-400">
+    <div class="min-h-screen">
+      <!-- <div class="bg-indigo-500 h-48 shadow-md rounded-lg sm mb-4  border border-red-400">
           <div class="max-w-2xl mx-auto py-12">
             <div class="flex">
               <div>
@@ -21,9 +20,7 @@
             </div>
           </div>
         </div> -->
-        <nuxt />
-      </div>
-      <div class="w-3/12"></div>
+      <nuxt />
     </div>
   </div>
 </template>
