@@ -1,5 +1,6 @@
 <template>
   <main class="max-w-7xl mx-auto">
+    <Stats />
     <section class="grid sm:grid-cols-2 gap-8 mt-8">
       <aside>
         <div class="flex items-center justify-between mb-1">
@@ -90,8 +91,10 @@
 </template>
 
 <script>
+  import Stats from "../../../../components/app/university/Stats";
   export default {
     layout: 'university',
+    components: { Stats },
     head () {
       return {
         title: 'Tableau de bord'
