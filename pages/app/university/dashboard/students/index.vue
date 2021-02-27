@@ -1,6 +1,6 @@
 <template>
   <main class="">
-    <header class="bg-gray-100 shadow-sm lg:static lg:overflow-y-visible px-20">
+    <header class="bg-gray-100 shadow-sm lg:static lg:overflow-y-visible px-24">
       <div class="relative flex justify-between xl:grid xl:grid-cols-12 lg:gap-8 py-3">
         <div class="min-w-0 flex-1 md:px-8 lg:px-0 xl:col-span-6">
           <div class="flex items-center px-6 py-4 md:max-w-3xl md:mx-auto lg:max-w-none lg:mx-0 xl:px-0">
@@ -19,7 +19,7 @@
         </div>
         <div class="flex items-center md:absolute md:right-0 md:inset-y-0">
           <!-- Mobile menu button  lg:hidden -->
-          <nuxt-link :to="{ name: '' }" class="ml-6 inline-flex items-center px-6 py-3 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-900 hover:bg-blue-800 focus:outline-none">
+          <nuxt-link :to="{ name: 'app-university-dashboard-students-create' }" class="ml-6 inline-flex items-center px-6 py-3 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-900 hover:bg-blue-800 focus:outline-none">
             Inscrire un nouvel étudiant
           </nuxt-link>
           <!-- <button type="button" class="-mx-2 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-rose-500" aria-expanded="false">
@@ -40,7 +40,7 @@
       </div>
     </header>
 
-    <div class="px-20 py-6">
+    <div class="max-w-screen-xl mx-auto py-6 px-4 sm:px-6 lg:px-2">
       <h3 class="text-2xl leading-6 font-medium text-gray-900 tracking-wide">Nos étudiants inscrits</h3>
 
       <section class="max-w-4xl mt-6">
@@ -80,7 +80,7 @@
                       <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">Master 2</span>
                     </td>
                     <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                      <nuxt-link :to="{ name: '', params : { uuid : 'aminata' }  }" class="text-blue-800 font-medium">Voir</nuxt-link>
+                      <nuxt-link :to="{ name: 'app-university-dashboard-students-uuid', params : { uuid : 'aminata' }  }" class="text-blue-800 font-medium">Voir</nuxt-link>
                     </td>
                   </tr>
                   </tbody>
