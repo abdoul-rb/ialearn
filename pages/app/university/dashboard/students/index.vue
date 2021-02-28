@@ -22,6 +22,7 @@
           <nuxt-link :to="{ name: 'app-university-dashboard-students-create' }" class="ml-6 inline-flex items-center px-6 py-3 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-900 hover:bg-blue-800 focus:outline-none">
             Inscrire un nouvel étudiant
           </nuxt-link>
+          <!-- Mobile breakpoint -->
           <!-- <button type="button" class="-mx-2 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-rose-500" aria-expanded="false">
             <span class="sr-only">Open menu</span>
             <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
@@ -101,20 +102,14 @@
             </a>
           </div>
           <div class="hidden md:-mt-px md:flex">
-            <a href="#" class="text-gray-500 hover:text-gray-700 pt-4 px-4 inline-flex items-center text-sm font-medium">
-              1
-            </a>
+            <a href="#" class="text-gray-500 hover:text-gray-700 pt-4 px-4 inline-flex items-center text-sm font-medium">1</a>
             <!-- Current: "border-indigo-500 text-indigo-600", Default: "border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300" -->
             <a href="#" class="text-indigo-600 pt-4 px-4 inline-flex items-center text-sm font-medium" aria-current="page">2</a>
             <span class="text-gray-500 pt-4 px-4 inline-flex items-center text-sm font-medium">
               ...
             </span>
-            <a href="#" class="text-gray-500 hover:text-gray-700 pt-4 px-4 inline-flex items-center text-sm font-medium">
-              9
-            </a>
-            <a href="#" class="text-gray-500 hover:text-gray-700 pt-4 px-4 inline-flex items-center text-sm font-medium">
-              10
-            </a>
+            <a href="#" class="text-gray-500 hover:text-gray-700 pt-4 px-4 inline-flex items-center text-sm font-medium">9</a>
+            <a href="#" class="text-gray-500 hover:text-gray-700 pt-4 px-4 inline-flex items-center text-sm font-medium">10</a>
           </div>
           <div class="-mt-px w-0 flex-1 flex justify-end">
             <a href="#" class="pt-4 pl-1 inline-flex items-center text-sm font-medium text-gray-500 hover:text-gray-700">

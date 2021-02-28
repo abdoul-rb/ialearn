@@ -7,9 +7,8 @@
           <aside>
             <div class="flex items-center justify-between mb-2">
               <h3 class="text-lg leading-6 font-medium text-gray-900">Cours</h3>
-              <nuxt-link :to="{ name: '' }" class="block text-sm text-fuchsia-90 font-medium px-2">Voir tous</nuxt-link>
+              <nuxt-link :to="{ name: 'app-university-dashboard-courses' }" class="block text-sm text-fuchsia-90 font-medium px-2">Voir tous</nuxt-link>
             </div>
-            <!-- This example requires Tailwind CSS v2.0+ -->
             <div class="bg-white shadow overflow-hidden sm:rounded-md">
               <ul class="divide-y divide-gray-200">
                 <li v-for="x in 3" :key="x">
@@ -18,9 +17,7 @@
                       <div class="flex items-center justify-between">
                         <p class="text-base font-semibold tracking-wide text-blue-900 truncate">Power BI</p>
                         <div class="ml-2 flex-shrink-0 flex">
-                          <p class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-blue-100 text-blue-800">
-                            Master 1
-                          </p>
+                          <p class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-blue-100 text-blue-800">Master 1</p>
                         </div>
                       </div>
                       <div class="mt-2 sm:flex sm:justify-between">
@@ -58,7 +55,7 @@
           <aside>
             <div class="flex items-center justify-between mb-2">
               <h3 class="text-lg leading-6 font-medium text-gray-900">Etudiants ajoutés récemment</h3>
-              <nuxt-link :to="{ name: '' }" class="block text-sm text-blue-800 font-medium px-2">Voir occurences</nuxt-link>
+              <nuxt-link :to="{ name: 'app-university-dashboard-students' }" class="block text-sm text-blue-800 font-medium px-2">Voir occurences</nuxt-link>
             </div>
             <div class="flex flex-col">
               <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
@@ -96,7 +93,7 @@
                             <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">Master 2</span>
                           </td>
                           <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                            <a href="#" class="text-blue-800 font-medium">Voir</a>
+                            <nuxt-link :to="{ name: 'app-university-dashboard-students-uuid', params: { uuid: 'aminata' } }" href="#" class="text-blue-800 font-medium">Voir</nuxt-link>
                           </td>
                         </tr>
                       </tbody>
