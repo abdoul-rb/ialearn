@@ -76,7 +76,7 @@
                         </tr>
                       </thead>
                       <tbody class="bg-white divide-y divide-gray-200">
-                        <tr v-for="x in 5" :key="x">
+                        <tr v-for="x in 4" :key="x">
                           <td class="px-6 py-4 whitespace-nowrap">
                             <div class="flex items-center">
                               <div class="flex-shrink-0 h-10 w-10">
@@ -109,9 +109,47 @@
         </section>
       </main>
     </div>
-    <div class="w-3/12 shadow">
+    <aside class="w-3/12 shadow py-10 px-12">
+      <div>
+        <div class="space-y-12 mb-6">
+          <div class="space-y-4">
+            <div class="aspect-w-3 aspect-h-2">
+              <img class="object-cover shadow-lg rounded-lg " src="~/assets/images/iaLearn_pres.png" alt="iaLearn_pres">
+            </div>
+          </div>
+        </div>
+        <div class="max-w-3xl mx-auto text-center">
+          <h4 class="block text-2xl font-semibold tracking-wide text-cyan-700 font-courgette">ialearn</h4>
+          <p class="mt-2 text-lg text-gray-500 font-nunito leading-5">Première plateforme de cours sur l'intélligence artificielle en Guinée.</p>
+        </div>
+        <dl class="mt-6 grid grid-cols-1 gap-5">
+          <div class="bg-white overflow-hidden shadow rounded-lg">
+            <div class="px-4 py-5 sm:p-6">
+              <dt class="text-sm font-medium text-gray-500 truncate">Total étudiants</dt>
+              <dd class="mt-1 text-3xl font-semibold text-gray-900 font-nunito">71,897</dd>
+            </div>
+          </div>
+        </dl>
 
-    </div>
+        <dl class="mt-6 grid grid-cols-1 gap-5">
+          <div class="bg-white overflow-hidden shadow rounded-lg">
+            <div class="px-4 py-5 sm:p-6">
+              <dt class="text-sm font-medium text-gray-500 truncate">Nombre de cours</dt>
+              <dd class="mt-1 text-3xl font-semibold text-gray-900 font-nunito">17</dd>
+            </div>
+          </div>
+        </dl>
+
+        <dl class="mt-6 grid grid-cols-1 gap-5">
+          <div class="bg-white overflow-hidden shadow rounded-lg">
+            <div class="px-4 py-5 sm:p-6">
+              <dt class="text-sm font-medium text-gray-500 truncate">Universités adhérants</dt>
+              <dd class="mt-1 text-3xl font-semibold text-gray-900 font-nunito">32</dd>
+            </div>
+          </div>
+        </dl>
+      </div>
+    </aside>
   </div>
 </template>
 
