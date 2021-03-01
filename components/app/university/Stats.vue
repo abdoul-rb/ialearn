@@ -69,7 +69,7 @@
         </div>
         <div class="bg-cyan-700 px-4 py-4 sm:px-6">
           <div class="text-sm text-right">
-            <nuxt-link :to="{ name: 'app-university-dashboard-courses' }" href="#" class="font-medium text-white"> Voir tous<span class="sr-only"> Nombre total de cours souscrits</span></nuxt-link>
+            <nuxt-link :to="{ name: 'app-university-dashboard-courses' }" class="font-medium text-white"> Voir tous<span class="sr-only"> Nombre total de cours souscrits</span></nuxt-link>
           </div>
         </div>
       </div>

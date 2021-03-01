@@ -20,7 +20,7 @@
         <div class="flex items-center md:absolute md:right-0 md:inset-y-0">
           <!-- Mobile menu button  lg:hidden -->
           <nuxt-link :to="{ name: 'app-university-dashboard-students-create' }" class="ml-6 inline-flex items-center px-6 py-3 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-900 hover:bg-blue-800 focus:outline-none">
-            Voir tous les cours
+            Voir les autres cours disponibles
           </nuxt-link>
         </div>
         <div class="hidden lg:flex lg:items-center xl:col-span-4">
@@ -97,8 +97,8 @@
             <span class="text-gray-500 pt-4 px-4 inline-flex items-center text-sm font-medium">
               ...
             </span>
-            <a href="#" class="text-gray-500 hover:text-gray-700 pt-4 px-4 inline-flex items-center text-sm font-medium"</a>
-            <a href="#" class="text-gray-500 hover:text-gray-700 pt-4 px-4 inline-flex items-center text-sm font-medium">10</a>
+            <a href="#" class="text-gray-500 hover:text-gray-700 pt-4 px-4 inline-flex items-center text-sm font-medium">9</a>
+            <a href="#" class="text-gray-500 hover:text-gray-700 pt-4 px-4 inline-flex items-center text-sm font-medium">>10</a>
           </div>
           <div class="-mt-px w-0 flex-1 flex justify-end">
             <a href="#" class="pt-4 pl-1 inline-flex items-center text-sm font-medium text-gray-500 hover:text-gray-700">

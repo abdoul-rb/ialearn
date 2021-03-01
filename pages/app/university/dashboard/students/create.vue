@@ -149,7 +149,7 @@
             </div>
           </div>
         </section>
-        <section aria-labelledby="payment_details_heading" class=" lg:col-span-2">
+        <section aria-labelledby="payment_details_heading" class="lg:col-span-2">
           <form action="#" >
             <div class="shadow sm:rounded-md sm:overflow-hidden">
               <div class="bg-white py-6 px-4 sm:p-6">
@@ -194,7 +194,6 @@
             </div>
           </form>
         </section>
-
       </div>
     </main>
 
