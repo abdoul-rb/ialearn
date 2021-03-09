@@ -3,16 +3,8 @@
     <div class="min-h-screen flex">
       <the-navigation />
       <section class="w-7/12 px-4 lg:px-10 bg-gray-100 py-10">
-        <div class="flex items-center justify-between mb-8">
-          <div class="relative text-gray-600">
-            <input class="border-2 border-gray-300 bg-white h-10 px-5 pr-24 rounded-lg text-sm focus:outline-none" type="search" name="search" placeholder="Search">
-            <button type="submit" class="absolute right-0 top-0 mt-4 mr-4">
-              <svg class="fill-current text-gray-600 h-4 w-4" xmlns="http://www.w3.org/2000/svg" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 56.966 56.966" style="enable-background:new 0 0 56.966 56.966;" xml:space="preserve">
-                <path d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23  s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92  c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17  s-17-7.626-17-17S14.61,6,23.984,6z" />
-              </svg>
-            </button>
-          </div>
-          <div>
+        <div class="flex items-center justify-end mb-8">
+          <div class="">
             <svg class="stroke-current text-gray-400 w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
             </svg>
@@ -51,7 +43,6 @@
               </span>
               <div class="col-span-2">
                 <div class="text-xs font-bold tracking-wide truncate my-0">UI/UX Design</div>
-                <div class="text-gray-500 text-xs font-medium tracking-wide my-0">Avancée</div>
               </div>
               <div class="col-span-2 h-2 relative w-full rounded-full shadow-xl overflow-hidden">
                 <div class="w-full h-full bg-gray-200 shadow-xl absolute"></div>
@@ -66,22 +57,20 @@
               </span>
               <div class="col-span-2">
                 <div class="text-xs font-bold tracking-wide truncate my-0">Power BI</div>
-                <div class="text-gray-500 text-xs font-normal tracking-normal my-0">Intermediaire</div>
               </div>
               <div class="col-span-2 h-2 relative w-full rounded-full shadow-xl overflow-hidden">
                 <div class="w-full h-full bg-gray-200 shadow-xl absolute"></div>
                 <div class="h-full bg-green-500 absolute" style="width:40%"></div>
               </div>
             </div>
-            <div class="grid grid-cols-5 items-center my-6">
+            <div class="grid grid-cols-5 border items-center my-6">
               <span class="col-span-1 inline-flex items-center justify-center text-center bg-yellow-100 w-8 h-8 rounded-md">
-                <svg class="stroke-current w-5 h-5 text-yellow-600"xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <svg class="stroke-current w-5 h-5 text-yellow-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
                 </svg>
               </span>
-              <div class="col-span-2">
+              <div class="col-span-2 border">
                 <div class="text-xs font-bold tracking-wide truncate my-0">L'apprentissage</div>
-                <div class="text-gray-500 text-xs font-normal tracking-normal my-0">Facile</div>
               </div>
               <div class="col-span-2 h-2 relative w-full rounded-full shadow-xl overflow-hidden">
                 <div class="w-full h-full bg-gray-200 shadow-xl absolute"></div>

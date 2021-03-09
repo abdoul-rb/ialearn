@@ -1,10 +1,10 @@
 <template>
   <div class="relative z-20 py-4 font-nunito">
-    <div class="max-w-6xl mx-auto px-4 sm:px-12 md:px-0 xl:px-0">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-0 xl:px-0">
       <nav class="relative flex items-center justify-between sm:h-6 md:justify-center">
         <div class="flex items-center flex-1 md:absolute md:inset-y-0 md:left-0">
           <div class="flex items-center justify-between w-full md:w-auto">
-            <nuxt-link :to=" { name : 'index' }" class="text-2xl text-indigo-1 font-courgette">iaLearn</nuxt-link>
+            <nuxt-link :to=" { name : 'index' }" class="text-3xl font-semibold tracking-wide text-cyan-700 font-courgette">iaLearn</nuxt-link>
             <!-- Hamburger Menu for mobile -->
             <div class="-mr-2 flex items-center md:hidden">
               <button @click.prevent=" isOpen = !isOpen" type="button" class="transform -translate-y-1 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out">
@@ -59,13 +59,13 @@
         </div>
       </nav>
     </div>
-    <div class="max-w-6xl mx-auto border-b border-gray-300 mt-2"></div>
-    <div class="max-w-6xl mx-auto mt-3">
+    <div class="max-w-7xl mx-auto border-b border-gray-300 mt-2"></div>
+    <div class="max-w-7xl mx-auto mt-3">
       <div class="hidden md:block space-x-10">
           <nuxt-link :to=" { name : 'pro' } " class="text-gray-500 text-md font-semibold italic tracking-wide hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out">Universités</nuxt-link>
           <span class="border-l border-gray-500 px-1"></span>
-          <nuxt-link :to=" { name : 'index' } " class="text-gray-500 text-md font-semibold tracking-wide hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out">Accueil</nuxt-link>
           <nuxt-link :to=" { name : 'courses' } " class="text-gray-500 text-md font-semibold tracking-wide hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out">Cours</nuxt-link>
+          <nuxt-link :to=" { name : 'forum' } " class="text-gray-500 text-md font-semibold tracking-wide hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out">Forum</nuxt-link>
         </div>
     </div>
     <!-- Hamburger Menu - Responsive mobile -->
@@ -88,6 +88,7 @@
             <nuxt-link :to=" { name : 'pro' } " class="block rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out px-3 py-2">Universités</nuxt-link>
             <nuxt-link :to=" { name : 'index' } " class="block rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out px-3 py-2">Accueil</nuxt-link>
             <nuxt-link :to=" { name : 'courses' } " class="block rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out px-3 py-2">Cours</nuxt-link>
+            <nuxt-link :to=" { name : 'forum' } " class="block rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out px-3 py-2">Forum</nuxt-link>
             <!-- User profile on mobile menu -->
             <div class="flex items-center space-x-3 mt-1 ml-4" v-if="$auth.loggedIn">
               <div class="flex-shrink-0 h-12 w-12">
