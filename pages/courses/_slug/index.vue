@@ -84,7 +84,7 @@
     mounted() {},
     async asyncData({ params, app }) {
       try {
-        let course = await app.$axios.$get(`admin/courses/${params.slug}`)
+        let course = await app.$axios.$get(`admin/courses/${params.slug}`);
         return { course : course.data }
       } catch (e) {
         console.log(e)

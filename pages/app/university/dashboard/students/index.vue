@@ -19,7 +19,7 @@
         </div>
         <div class="flex items-center md:absolute md:right-0 md:inset-y-0">
           <!-- Mobile menu button  lg:hidden -->
-          <nuxt-link :to="{ name: 'app-university-dashboard-students-create' }" class="ml-6 inline-flex items-center px-6 py-3 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-900 hover:bg-blue-800 focus:outline-none">
+          <nuxt-link :to="{ name: 'app-university-dashboard-students-create' }" class="ml-6 inline-flex items-center px-6 py-3 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-900 focus:outline-none">
             Inscrire un nouvel étudiant
           </nuxt-link>
           <!-- Mobile breakpoint -->
@@ -35,7 +35,7 @@
         </div>
         <div class="hidden lg:flex lg:items-center xl:col-span-4">
           <nuxt-link :to="{ name: '' }" class="inline-flex items-center px-6 py-3 border border-transparent text-sm font-medium tracking-wide rounded-md shadow-sm text-white bg-cyan-700 hover:bg-cyan-800 focus:outline-none">
-            Search
+            Rechercher
           </nuxt-link>
         </div>
       </div>
@@ -52,8 +52,7 @@
                 <table class="min-w-full divide-y divide-gray-200">
                   <thead class="bg-gray-50">
                   <tr>
-                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Profile</th>
-                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Title</th>
+                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Profil</th>
                     <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Niveau</th>
                     <th scope="col" class="relative px-6 py-3">
                       <span class="sr-only">Voir</span>
@@ -61,29 +60,25 @@
                   </tr>
                   </thead>
                   <tbody class="bg-white divide-y divide-gray-200">
-                  <tr v-for="x in 12" :key="x">
-                    <td class="px-6 py-4 whitespace-nowrap">
-                      <div class="flex items-center">
-                        <div class="flex-shrink-0 h-10 w-10">
-                          <img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=4&amp;w=256&amp;h=256&amp;q=60" alt="">
+                    <tr v-for="x in 12" :key="x">
+                      <td class="px-6 py-4 whitespace-nowrap">
+                        <div class="flex items-center">
+                          <div class="flex-shrink-0 h-10 w-10">
+                            <img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=4&amp;w=256&amp;h=256&amp;q=60" alt="">
+                          </div>
+                          <div class="ml-4">
+                            <div class="text-sm font-medium text-gray-900">Aminata Keita</div>
+                            <div class="text-sm text-gray-500">aminata.keita@mail.com</div>
+                          </div>
                         </div>
-                        <div class="ml-4">
-                          <div class="text-sm font-medium text-gray-900">Aminata Keita</div>
-                          <div class="text-sm text-gray-500">aminata.keita@mail.com</div>
-                        </div>
-                      </div>
-                    </td>
-                    <td class="px-6 py-4 whitespace-nowrap">
-                      <div class="text-sm text-gray-900">Regional Paradigm</div>
-                      <div class="text-sm text-gray-500">Optimization</div>
-                    </td>
-                    <td class="px-6 py-4 whitespace-nowrap">
-                      <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">Master 2</span>
-                    </td>
-                    <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                      <nuxt-link :to="{ name: 'app-university-dashboard-students-uuid', params : { uuid : 'aminata' }  }" class="text-blue-800 font-medium">Voir</nuxt-link>
-                    </td>
-                  </tr>
+                      </td>
+                      <td class="px-6 py-4 whitespace-nowrap">
+                        <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">Master 2</span>
+                      </td>
+                      <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                        <nuxt-link :to="{ name: 'app-university-dashboard-students-uuid', params : { uuid : 'aminata' }  }" class="text-blue-800 font-medium">Voir</nuxt-link>
+                      </td>
+                    </tr>
                   </tbody>
                 </table>
               </div>
@@ -93,7 +88,7 @@
 
         <nav class="px-4 flex items-center justify-between sm:px-0">
           <div class="-mt-px w-0 flex-1 flex">
-            <a href="#" class="border-t-2 border-transparent pt-4 pr-1 inline-flex items-center text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300">
+            <a href="#" class="border-t-2 border-transparent pt-4 pr-1 inline-flex items-center text-sm font-medium text-gray-500">
               <!-- Heroicon name: solid/arrow-narrow-left -->
               <svg class="mr-3 h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                 <path fill-rule="evenodd" d="M7.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l2.293 2.293a1 1 0 010 1.414z" clip-rule="evenodd" />

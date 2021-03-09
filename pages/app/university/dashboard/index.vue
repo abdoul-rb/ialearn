@@ -16,9 +16,6 @@
                     <div class="px-4 py-4 sm:px-6">
                       <div class="flex items-center justify-between">
                         <p class="text-base font-semibold tracking-wide text-blue-900 truncate">Power BI</p>
-                        <div class="ml-2 flex-shrink-0 flex">
-                          <p class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-blue-100 text-blue-800">Master 1</p>
-                        </div>
                       </div>
                       <div class="mt-2 sm:flex sm:justify-between">
                         <div class="sm:flex">
@@ -64,8 +61,7 @@
                     <table class="min-w-full divide-y divide-gray-200">
                       <thead class="bg-gray-50">
                         <tr>
-                          <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Profile</th>
-                          <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Title</th>
+                          <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Profil</th>
                           <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Niveau</th>
                           <th scope="col" class="relative px-6 py-3">
                             <span class="sr-only">Voir</span>
@@ -86,14 +82,10 @@
                             </div>
                           </td>
                           <td class="px-6 py-4 whitespace-nowrap">
-                            <div class="text-sm text-gray-900">Regional Paradigm</div>
-                            <div class="text-sm text-gray-500">Optimization</div>
-                          </td>
-                          <td class="px-6 py-4 whitespace-nowrap">
                             <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">Master 2</span>
                           </td>
                           <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                            <nuxt-link :to="{ name: 'app-university-dashboard-students-uuid', params: { uuid: 'aminata' } }" href="#" class="text-blue-800 font-medium">Voir</nuxt-link>
+                            <nuxt-link :to="{ name: 'app-university-dashboard-students-uuid', params: { uuid: 'aminata' } }" class="text-blue-800 font-medium">Voir</nuxt-link>
                           </td>
                         </tr>
                       </tbody>
@@ -108,40 +100,39 @@
     </div>
     <aside class="w-3/12 shadow py-10 px-12">
       <div>
-        <div class="space-y-12 mb-6">
+        <div class="space-y-12 mb-2">
           <div class="space-y-4">
-            <div class="aspect-w-3 aspect-h-2">
-              <img class="object-cover shadow-lg rounded-lg " src="~/assets/images/iaLearn_pres.png" alt="iaLearn_pres">
+            <div class="aspect-w-3 aspect-h-2 flex items-center justify-center">
+              <img class="object-cover rounded-lg h-56 w-56" src="~/assets/images/iaLearn_pres_2.png" alt="iaLearn_pres">
             </div>
           </div>
         </div>
         <div class="max-w-3xl mx-auto text-center">
-          <h4 class="block text-2xl font-semibold tracking-wide text-cyan-700 font-courgette">ialearn</h4>
-          <p class="mt-2 text-lg text-gray-500 font-nunito leading-5">Première plateforme de cours sur l'intélligence artificielle en Guinée.</p>
+          <p class="mt-2 text-lg text-gray-500 font-nunito leading-5">Première plateforme d'apprentissage en intélligence artificielle en Guinée.</p>
         </div>
         <dl class="mt-6 grid grid-cols-1 gap-5">
           <div class="bg-white overflow-hidden shadow rounded-lg">
-            <div class="px-4 py-5 sm:p-6">
-              <dt class="text-sm font-medium text-gray-500 truncate">Total étudiants</dt>
+            <div class="px-4 py-3 sm:p-4 text-center">
               <dd class="mt-1 text-3xl font-semibold text-gray-900 font-nunito">71,897</dd>
+              <dt class="text-sm font-medium text-gray-500 truncate">étudiants sur la plateforme</dt>
             </div>
           </div>
         </dl>
 
         <dl class="mt-6 grid grid-cols-1 gap-5">
           <div class="bg-white overflow-hidden shadow rounded-lg">
-            <div class="px-4 py-5 sm:p-6">
-              <dt class="text-sm font-medium text-gray-500 truncate">Nombre de cours</dt>
+            <div class="px-4 py-3 sm:p-4 text-center">
               <dd class="mt-1 text-3xl font-semibold text-gray-900 font-nunito">17</dd>
+              <dt class="text-sm font-medium text-gray-500 truncate">cours totals disponibles</dt>
             </div>
           </div>
         </dl>
 
         <dl class="mt-6 grid grid-cols-1 gap-5">
           <div class="bg-white overflow-hidden shadow rounded-lg">
-            <div class="px-4 py-5 sm:p-6">
-              <dt class="text-sm font-medium text-gray-500 truncate">Universités adhérants</dt>
+            <div class="px-4 py-3 sm:p-4 text-center">
               <dd class="mt-1 text-3xl font-semibold text-gray-900 font-nunito">32</dd>
+              <dt class="text-sm font-medium text-gray-500 truncate">universités adhérantes</dt>
             </div>
           </div>
         </dl>

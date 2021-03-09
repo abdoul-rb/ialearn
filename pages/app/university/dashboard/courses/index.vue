@@ -12,7 +12,7 @@
                     <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
                   </svg>
                 </div>
-                <input id="search" name="search" class="block w-full bg-white border border-gray-300 rounded-md py-3 pl-10 pr-3 text-sm placeholder-gray-500 focus:outline-none focus:text-gray-900 focus:placeholder-gray-400 sm:text-sm" placeholder="Rechercher un étudiant ..." type="search">
+                <input id="search" name="search" class="block w-full bg-white border border-gray-300 rounded-md py-3 pl-10 pr-3 text-sm placeholder-gray-500 focus:outline-none focus:text-gray-900 focus:placeholder-gray-400 sm:text-sm" placeholder="Rechercher un cours" type="search">
               </div>
             </div>
           </div>
@@ -25,14 +25,14 @@
         </div>
         <div class="hidden lg:flex lg:items-center xl:col-span-4">
           <nuxt-link :to="{ name: '' }" class="inline-flex items-center px-6 py-3 border border-transparent text-sm font-medium tracking-wide rounded-md shadow-sm text-white bg-cyan-700 hover:bg-cyan-800 focus:outline-none">
-            Search
+            Rechercher
           </nuxt-link>
         </div>
       </div>
     </header>
 
     <div class="max-w-screen-xl mx-auto py-6 px-4 sm:px-6 lg:px-2">
-      <h3 class="text-2xl leading-6 font-medium text-gray-900 tracking-wide">Les cours disponibles</h3>
+      <h3 class="text-2xl leading-6 font-medium text-gray-900 tracking-wide">Les cours souscrits</h3>
 
       <section class="max-w-4xl mt-6">
         <div class="bg-white shadow overflow-hidden sm:rounded-md">
@@ -42,11 +42,6 @@
                 <div class="px-4 py-4 sm:px-6">
                   <div class="flex items-center justify-between">
                     <p class="text-base font-semibold tracking-wide text-blue-900 truncate">Power BI</p>
-                    <div class="ml-2 flex-shrink-0 flex">
-                      <p class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-blue-100 text-blue-800">
-                        Master 1
-                      </p>
-                    </div>
                   </div>
                   <div class="mt-2 sm:flex sm:justify-between">
                     <div class="sm:flex">
@@ -82,7 +77,7 @@
 
         <nav class="px-4 flex items-center justify-between sm:px-0">
           <div class="-mt-px w-0 flex-1 flex">
-            <a href="#" class="border-t-2 border-transparent pt-4 pr-1 inline-flex items-center text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300">
+            <a href="#" class="border-t-2 border-transparent pt-4 pr-1 inline-flex items-center text-sm font-medium text-gray-500">
               <!-- Heroicon name: solid/arrow-narrow-left -->
               <svg class="mr-3 h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                 <path fill-rule="evenodd" d="M7.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l2.293 2.293a1 1 0 010 1.414z" clip-rule="evenodd" />
@@ -98,7 +93,7 @@
               ...
             </span>
             <a href="#" class="text-gray-500 hover:text-gray-700 pt-4 px-4 inline-flex items-center text-sm font-medium">9</a>
-            <a href="#" class="text-gray-500 hover:text-gray-700 pt-4 px-4 inline-flex items-center text-sm font-medium">>10</a>
+            <a href="#" class="text-gray-500 hover:text-gray-700 pt-4 px-4 inline-flex items-center text-sm font-medium">10</a>
           </div>
           <div class="-mt-px w-0 flex-1 flex justify-end">
             <a href="#" class="pt-4 pl-1 inline-flex items-center text-sm font-medium text-gray-500 hover:text-gray-700">

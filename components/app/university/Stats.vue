@@ -33,7 +33,7 @@
         </div>
         <div class="bg-cyan-700 px-4 py-4 sm:px-6">
           <div class="text-sm text-right">
-            <nuxt-link :to="{ name: 'app-university-dashboard-students' }" href="#" class="font-medium text-white"> Voir tous<span class="sr-only"> Nombre total d'étudiants inscrits</span></nuxt-link>
+            <nuxt-link :to="{ name: 'app-university-dashboard-students' }" class="font-medium text-white"> Voir tous<span class="sr-only"> Nombre total d'étudiants inscrits</span></nuxt-link>
           </div>
         </div>
       </div>
@@ -42,8 +42,8 @@
         <div class="flex-grow px-4 py-5 sm:p-6">
           <div class="flex items-center">
             <div class="flex-shrink-0 bg-cyan-500 rounded-md p-3">
-              <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+              <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
               </svg>
             </div>
             <div class="ml-5 w-0 flex-1">

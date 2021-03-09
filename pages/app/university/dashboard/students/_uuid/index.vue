@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="relative bg-blue-900 pb-32 overflow-hidden">
+    <div class="relative bg-cyan-700 pb-32 overflow-hidden">
       <header class="relative py-10">
         <div class="flex items-center justify-between px-24">
           <h1 class="text-xl sm:text-3xl font-nunito font-semibold tracking-wide text-white">{{ fullname }}</h1>
