@@ -1,10 +1,8 @@
 <template>
   <div class="relative bg-white overflow-hidden font-montserrat">
-    <div class="pb-8 sm:pb-12">
-      <theNavigation />
-      <div class="min-h-screen">
-        <nuxt />
-      </div>
+    <_Nav />
+    <div class="min-h-screen">
+      <nuxt />
     </div>
     <the-footer />
   </div>
@@ -12,9 +10,10 @@
 
 <script>
   import theFooter from '../components/theFooter'
+  import _Nav from "../components/app/_Nav";
   import theNavigation from "../components/app/theNavigation";
   export default {
-    components: { theFooter, theNavigation },
+    components: { theFooter, theNavigation, _Nav },
     data () {
       return {
         isOpen: false
