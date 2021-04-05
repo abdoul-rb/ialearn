@@ -1,5 +1,5 @@
 <template>
-  <header class="bg-white shadow-xl border">
+  <header class="bg-white shadow">
     <div class="max-w-7xl mx-auto px-2 sm:px-4 lg:divide-y lg:divide-gray-200 lg:px-0">
       <div class="relative h-16 flex justify-between">
         <div class="relative z-10 px-2 flex lg:px-0">
@@ -13,7 +13,7 @@
             <label for="search" class="sr-only">Search</label>
             <div class="relative">
               <div class="pointer-events-none absolute inset-y-0 left-0 pl-3 flex items-center">
-                <svg class="h-5 w-5 text-gray-400" x-description="Heroicon name: solid/search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <svg class="h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                   <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path>
                 </svg>
               </div>
@@ -72,7 +72,7 @@
           </div>
         </div>
       </div>
-      <nav class="hidden lg:py-2 lg:flex lg:space-x-8" aria-label="Global">
+      <nav class="hidden lg:py-3 lg:flex lg:space-x-8" aria-label="Global">
         <nuxt-link :to="{ name : 'pro' }" class="text-gray-900 hover:bg-gray-50 hover:text-gray-900 rounded-md py-2 px-3 inline-flex items-center text-sm font-medium" :class="$route.name === 'pro' ? 'bg-gray-100 text-gray-900': ''">
           Université
         </nuxt-link>
