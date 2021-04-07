@@ -37,7 +37,7 @@
         <div>
           <p class="text-base font-semibold tracking-tight text-cyan-700 uppercase">Get started</p>
           <h2 class="text-3xl text-gray-800 font-nunito font-extrabold md:text-4xl">
-            Commencez avec iaLearn
+            Why choose iaLearn
           </h2>
           <p class="mt-2 text-base sm:text-base xl:text-lg font-medium text-gray-600 leading-3">
             Votre apprentissage est simplifié grâce à nos cours fun et bien fait.

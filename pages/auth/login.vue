@@ -31,19 +31,19 @@
               </div>
               <form @submit.prevent="submit" class="mt-8 lg:mt-10">
                 <div class="space-y-4">
-                  <div class="block">
-                    <div class="relative bg-gray-900 rounded border border-gray-500 px-2 transition-all ease-out duration-300 focus-within:bg-gray-800 focus-within:border-gray-400">
-                      <input type="email" id="email" name="email" v-model="form.email" placeholder="Entrez votre adresse email" autocomplete="off" class="relative w-full bg-transparent outline-none text-sm px-1 py-3 z-10">
-                    </div>
-                    <span v-if="errors" class="text-red-500 text-xs">Please enter your email or mobile number.</span></div>
-                    <div class="block">
-                      <div class="relative bg-gray-900 rounded border border-gray-500 px-2 transition-all ease-out duration-300 focus-within:bg-gray-800 focus-within:border-gray-400">
-                        <input type="password" id="password" name="password" v-model="form.password" placeholder="Mot de passe" autocomplete="off" class="relative w-full bg-transparent outline-none text-sm px-1 py-3 z-10">
-                      </div>
-                      <span v-if="errors" class="text-red-500 text-xs">Please enter your password.</span>
-                    </div>
                   <div class="py-3">
-                    <button type="submit" class="w-full inline-flex items-center justify-center rounded-lg overflow-hidden px-4 py-3 bg-indigo-600 text-white transition ease-out duration-300 uppercase font-semibold hover:bg-indigo-700 focus:outline-none tracking-wide">
+                    <div class="bg-gray-900 rounded border border-gray-500 transition-all ease-out duration-300 focus:outline-none focus:border-transparent">
+                      <input type="email" v-model="form.email" class="w-full bg-transparent outline-none text-sm px-2 py-3 z-10 focus:outline-none" id="email" placeholder="Entrez votre adresse email">
+                    </div>
+                    <span class="text-red-500 text-xs" v-if="false">Adresse email incorrect</span>
+                  </div>
+                  <div class="block">
+                    <div class="bg-gray-900 rounded border border-gray-500 transition-all ease-out duration-300 focus:outline-none focus:border-transparent">
+                      <input type="password" v-model="form.password" class="w-full bg-transparent outline-none text-sm px-2 py-3 z-10 focus:outline-none" id="password" placeholder="Mot de passe">
+                    </div>
+                    <span class="text-red-500 text-xs" v-if="false">Mot de passe incorrect</span></div>
+                  <div class="py-3">
+                    <button class="w-full inline-flex items-center justify-center rounded-lg overflow-hidden px-4 py-3 bg-cyan-700 text-white transition ease-out duration-300 uppercase font-semibold hover:bg-cyan-800 focus:outline-none tracking-wide" type="submit">
                       Se connecter
                     </button>
                   </div>
@@ -109,15 +109,20 @@
         errors: null,
       }
     },
+    mounted() {
+      console.log(this.form)
+    },
     methods: {
       async submit() {
         try {
-          await this.$auth.loginWith('local', { data: this.form })
-        } catch (error) {
-          console.log(error)
+          await this.$auth.loginWith('local', { data: this.form }).then(() => {
+            this.$router.push({ name : 'index' })
+          });
+        } catch (e) {
+          console.log(e.response.data.error);
+          this.validation = e.response.data.error;
         }
-        console.log(this.form)
-      },
+      }
     }
   }
 </script>
