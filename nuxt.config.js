@@ -15,7 +15,7 @@ export default {
   ** See https://nuxtjs.org/api/configuration-head
   */
   head: {
-    titleTemplate : '%s - ialearn',
+    titleTemplate : '%s • ialearn',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -61,16 +61,15 @@ export default {
     '@nuxtjs/dotenv',
     '@nuxtjs/auth',
     // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/axios',
+    '@nuxtjs/axios'
   ],
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {
     baseURL: process.env.API_URL || 'http://localhost:8000/api',
-    proxy: { 'admin/courses': process.env.API_URL + '/admin/courses'}
   },
   auth: {
     strategies: {
-      local:{
+      local: {
         endpoints : {
           login : { url : 'auth/login', method : 'post', propertyName : 'access_token' },
           logout: { url: 'auth/logout', method: 'post' },

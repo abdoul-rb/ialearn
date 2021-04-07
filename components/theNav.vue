@@ -28,12 +28,7 @@
         </div>
       </div>
     </nav>
-    <transition enter-active-class="duration-150 ease-out"
-                enter-class="opacity-0 scale-95"
-                enter-to-class="opacity-100 scale-100"
-                leave-active-class="duration-100 ease-in"
-                leave-class="opacity-100 scale-100"
-                leave-to-class="opacity-0 scale-95">
+    <transition enter-active-class="duration-150 ease-out" enter-class="opacity-0 scale-95" enter-to-class="opacity-100 scale-100" leave-active-class="duration-100 ease-in" leave-class="opacity-100 scale-100" leave-to-class="opacity-0 scale-95">
       <div class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden" v-show="isOpen">
         <div class="rounded-lg shadow-md">
           <div class="rounded-lg bg-white shadow-xs overflow-hidden" role="menu" aria-orientation="vertical" aria-labelledby="main-menu">
