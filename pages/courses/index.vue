@@ -39,7 +39,7 @@
     layout: 'app',
     head () {
       return {
-        title: 'Toutes nos formations'
+        title: 'Nos cours'
       }
     },
     data() {
@@ -49,7 +49,7 @@
     },
     async asyncData(context) {
       try {
-        let courses = await context.$axios.$get('admin/courses')
+        let courses = await context.$axios.$get('admin/courses');
         return { courses : courses.data }
       } catch (e) {
         console.log(e)
