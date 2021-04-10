@@ -22,19 +22,19 @@
         </div>
 
         <div class="px-5 py-2">
-          <nuxt-link :to="{ name: 'forum' }" class="text-base text-gray-300 hover:text-gray-400">
+          <nuxt-link :to="{ name: '' }" class="text-base text-gray-300 hover:text-gray-400">
             Conditions générales d'utilisation
           </nuxt-link>
         </div>
 
         <div class="px-5 py-2">
-          <nuxt-link :to="{ name: 'forum' }" class="text-base text-gray-300 hover:text-gray-400">
+          <nuxt-link :to="{ name: '' }" class="text-base text-gray-300 hover:text-gray-400">
             Contact
           </nuxt-link>
         </div>
 
         <div class="px-5 py-2">
-          <nuxt-link :to="{ name: 'forum' }" class="text-base text-gray-300 hover:text-gray-400">
+          <nuxt-link :to="{ name: '' }" class="text-base text-gray-300 hover:text-gray-400">
             Téléchargez l'application
           </nuxt-link>
         </div>
