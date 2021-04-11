@@ -53,7 +53,7 @@
     layout: 'student',
     head () {
       return {
-        title: 'Tableau de bord - Mon profil'
+        title: 'Mon profil'
       }
     }
   }

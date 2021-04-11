@@ -27,7 +27,7 @@
             <div class="relative z-30 max-w-md mx-auto px-4 py-8 lg:px-8 lg:py-10 shadow-md bg-gray-800 rounded-lg">
               <div>
                 <h1 class="text-xl lg:text-2xl font-bold text-gray-300 tracking-wider">Connexion</h1>
-                <p class="tracking-wide text-sm">Connectez-vous pour accéder à vos formations.</p>
+                <p class="tracking-wide text-sm">Connectez-vous pour accéder aux cours.</p>
               </div>
               <form @submit.prevent="submit" class="mt-8 lg:mt-10">
                 <div class="space-y-4">
@@ -110,17 +110,16 @@
       }
     },
     mounted() {
-      console.log(this.form)
+      console.log(this.form);
     },
     methods: {
       async submit() {
         try {
           await this.$auth.loginWith('local', { data: this.form }).then(() => {
-            this.$router.push({ name : 'index' })
+            this.$router.push({ name : 'courses' });
           });
         } catch (e) {
-          console.log(e.response.data.error);
-          this.validation = e.response.data.error;
+          this.errors = e.response.data.error;
         }
       }
     }
