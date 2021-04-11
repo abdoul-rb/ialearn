@@ -44,11 +44,11 @@
           </button>
           <!-- Profile dropdown -->
           <div class="flex-shrink-0 relative ml-4">
-            <template v-if="!$auth.loggedIn">
+            <template v-if="$auth.loggedIn">
               <div class="">
                 <button type="button" @click.prevent="dropdownOpen = !dropdownOpen" class="bg-white rounded-full flex focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-200" id="user-menu" aria-haspopup="true">
                   <span class="sr-only">Open user menu</span>
-                  <img class="h-8 w-8 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&amp;ixqx=LRDGaNTXAY&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80" alt="">
+                  <img class="h-8 w-8 rounded-full" :src="this.$auth.user.avatar" :alt="'Photo de profil de ' + this.$auth.user.lastname">
                 </button>
               </div>
             </template>
@@ -61,7 +61,6 @@
                 </button>
               </div>
             </template>
-
             <transition enter-active-class="transition ease-out duration-100" enter-class="transform opacity-0 scale-95" enter-to-class="transform opacity-100 scale-100" leave-active-class="transition ease-in duration-75" leave-class="transform opacity-100 scale-100" leave-to-class="transform opacity-0 scale-95">
               <div v-show="dropdownOpen" class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 py-1 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu" style="display: none;">
                 <nuxt-link :to="{ name : 'app-student-dashboard' }" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Tableau de bord</nuxt-link>
@@ -99,11 +98,11 @@
       <div class="border-t border-gray-200 pt-4 pb-3">
         <div class="px-4 flex items-center">
           <div class="flex-shrink-0">
-            <img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&amp;ixqx=LRDGaNTXAY&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80" alt="">
+            <img class="h-10 w-10 rounded-full" :src="this.$auth.user.avatar" :alt="'Photo de profil de ' + this.$auth.user.lastname">
           </div>
           <div class="ml-3">
-            <div class="text-sm font-medium text-gray-800">Tom Cook</div>
-            <div class="text-xs font-medium text-gray-500">tom@example.com</div>
+            <div class="text-sm font-medium text-gray-800">{{ this.$auth.user.firstname }} {{ this.$auth.user.lastname }}</div>
+            <div class="text-xs font-medium text-gray-500">{{ this.$auth.user.email }}</div>
           </div>
           <button class="ml-auto flex-shrink-0 bg-white rounded-full p-1 text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500">
             <span class="sr-only">View notifications</span>
