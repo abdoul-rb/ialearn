@@ -97,13 +97,24 @@
       </div>
       <div class="border-t border-gray-200 pt-4 pb-3">
         <div class="px-4 flex items-center">
-          <div class="flex-shrink-0">
-            <img class="h-10 w-10 rounded-full" :src="this.$auth.user.avatar" :alt="'Photo de profil de ' + this.$auth.user.lastname">
-          </div>
-          <div class="ml-3">
-            <div class="text-sm font-medium text-gray-800">{{ this.$auth.user.firstname }} {{ this.$auth.user.lastname }}</div>
-            <div class="text-xs font-medium text-gray-500">{{ this.$auth.user.email }}</div>
-          </div>
+          <template v-if="$auth.loggedIn">
+            <div class="flex-shrink-0">
+              <img class="h-10 w-10 rounded-full" :src="this.$auth.user.avatar" :alt="'Photo de profil de ' + this.$auth.user.lastname">
+            </div>
+            <div class="ml-3">
+              <div class="text-sm font-medium text-gray-800">{{ this.$auth.user.firstname }} {{ this.$auth.user.lastname }}</div>
+              <div class="text-xs font-medium text-gray-500">{{ this.$auth.user.email }}</div>
+            </div>
+          </template>
+          <template v-else>
+            <div>
+              <button type="button" class="flex focus:outline-none" @click.prevent="$modal.show('LoginModal')">
+                <svg class="fill-current text-cyan-700 h-8 w-8 rounded-full" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="user-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+                  <path fill="currentColor" d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 96c48.6 0 88 39.4 88 88s-39.4 88-88 88-88-39.4-88-88 39.4-88 88-88zm0 344c-58.7 0-111.3-26.6-146.5-68.2 18.8-35.4 55.6-59.8 98.5-59.8 2.4 0 4.8.4 7.1 1.1 13 4.2 26.6 6.9 40.9 6.9 14.3 0 28-2.7 40.9-6.9 2.3-.7 4.7-1.1 7.1-1.1 42.9 0 79.7 24.4 98.5 59.8C359.3 421.4 306.7 448 248 448z"></path>
+                </svg>
+              </button>
+            </div>
+          </template>
           <button class="ml-auto flex-shrink-0 bg-white rounded-full p-1 text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500">
             <span class="sr-only">View notifications</span>
             <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
