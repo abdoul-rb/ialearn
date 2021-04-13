@@ -3,7 +3,7 @@
     <div class="max-w-7xl mx-auto">
       <div class="flex justify-between h-20">
         <div class="flex">
-          <nuxt-link :to=" { name : 'app-university-dashboard' } " class="outline-none focus:outline-none block flex-shrink-0 flex items-center transform translate-y-1 -translate-x-4">
+          <nuxt-link :to=" { name : 'app-university-dashboard' } " class="outline-none focus:outline-none block flex-shrink-0 flex items-center">
             <span aria-label="Home" class="block text-3xl font-semibold tracking-wide text-cyan-700 font-courgette">ialearn</span>
           </nuxt-link>
         </div>
@@ -15,9 +15,9 @@
         <div class="hidden sm:ml-6 sm:flex sm:items-center">
           <div class="ml-3 relative">
             <button @click.prevent="dropdownOpen = !dropdownOpen" class="flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-transparent transition duration-150 ease-in-out space-x-3" id="user-menu" aria-label="User menu" aria-haspopup="true">
-              <img class="h-8 w-8 rounded-full object-cover object-top" src="https://images.unsplash.com/photo-1522529599102-193c0d76b5b6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" alt="" />
+              <img class="h-8 w-8 rounded-full object-cover object-top" :src="this.$auth.user.avatar" :alt="'Photo de profil de ' + this.$auth.user.lastname" />
               <div class="text-left leading-4">
-                <div class="text-sm text-gray-700">Abdoul Rahim</div>
+                <div class="text-sm text-gray-700">{{ this.$auth.user.firstname }} {{ this.$auth.user.lastname }}</div>
                 <div class="text-xs text-gray-500">Recteur</div>
               </div>
               <svg class="block stroke-current text-black w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -27,7 +27,7 @@
             <div class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg border z-50" v-show="dropdownOpen">
               <div class="py-1 rounded-md bg-white shadow-xs" role="menu" aria-orientation="vertical" aria-labelledby="user-menu">
                 <nuxt-link :to=" { name : 'app-university-dashboard-profile' } " class="block text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out px-4 py-2">Mon profil</nuxt-link>
-                <a href="#" @click.prevent="logout" :to=" { name : '' } " class="block text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out px-4 py-2">Déconnexion</a>
+                <a href="#" @click.prevent="logout" class="block text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out px-4 py-2">Déconnexion</a>
               </div>
             </div>
           </div>
@@ -53,10 +53,10 @@
       <div class="pt-4 pb-3 border-t border-gray-200">
         <div class="flex items-center px-4">
           <div class="flex-shrink-0">
-            <img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" />
+            <img class="h-10 w-10 rounded-full" :src="this.$auth.user.avatar" :alt="'Photo de profil de ' + this.$auth.user.lastname" />
           </div>
           <div class="ml-3">
-            <div class="text-base font-medium leading-6 text-gray-800">Abdoul Rahim</div>
+            <div class="text-base font-medium leading-6 text-gray-800">{{ this.$auth.user.firstname }} {{ this.$auth.user.lastname }}</div>
             <div class="text-sm font-medium leading-5 text-gray-500">Recteur</div>
           </div>
         </div>

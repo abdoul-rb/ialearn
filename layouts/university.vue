@@ -28,6 +28,7 @@
 <script>
   import theNavigation from "../components/app/university/theNavigation";
   export default {
+    middleware: 'auth',
     components: { theNavigation },
     head () {
       return {
