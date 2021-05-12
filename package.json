@@ -28,7 +28,7 @@
     "@nuxtjs/tailwindcss": "^3.3.4",
     "@tailwindcss/postcss7-compat": "^2.0.2",
     "autoprefixer": "^9.8.6",
-    "postcss": "^7.0.34",
+    "postcss": "^8.2.10",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.2"
   }
 }
