@@ -1,22 +1,22 @@
 <template>
-  <div class="relative bg-white overflow-hidden font-montserrat">
-    <Navbar />
-    <div class="min-h-screen">
-      <nuxt />
-    </div>
-  </div>
+    <div class="relative bg-white overflow-hidden font-montserrat">
+        <Navigation />
+
+        <div class="min-h-screen">
+            <nuxt />
+        </div>
+   </div>
 </template>
 
 <script>
-  import theFooter from '../components/theFooter'
-  import Navbar from "../components/app/Navbar";
-  import theNavigation from "../components/app/theNavigation";
-  export default {
-    components: { Navbar, theFooter, theNavigation },
-    data () {
-      return {
-        isOpen: false
-      }
-    }
-  }
+	import theFooter from '../components/theFooter'
+	import Navigation from "../components/app/Navigation";
+	export default {
+		components: { theFooter, Navigation },
+		data () {
+			return {
+				isOpen: false
+			}
+		}
+	}
 </script>
