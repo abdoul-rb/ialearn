@@ -126,16 +126,13 @@
 		</div>
 	</section>
 	<!-- End Card Blog -->
-
-    <the-footer/>
   </div>
 </template>
 <script>
   import lottie from 'lottie-web';
-  import theFooter from "../components/theFooter";
   export default {
     layout: 'app',
-    components: { theFooter },
+    components: {  },
     
 	head() {
         return {

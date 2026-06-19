@@ -2,9 +2,11 @@
     <div class="relative bg-white overflow-hidden font-montserrat">
         <Navigation />
 
-        <div class="min-h-screen">
+        <main class="min-h-screen">
             <nuxt />
-        </div>
+        </main>
+
+		<the-footer/>
    </div>
 </template>
 

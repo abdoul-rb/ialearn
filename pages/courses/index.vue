@@ -2,7 +2,7 @@
 	<main class="max-w-7xl mx-auto px-4 sm:py-10 lg:px-0 font-nunito">
 		<h1 class="text-3xl lg:text-4xl font-semibold tracking-tight leading-5 text-black">Nos cours</h1>
 		<p class="mt-2 max-w-3xl text-base text-gray-900">
-			Thoughtfully designed objects for the workspace, home, and travel.
+			Choisissez une formation et devenez meilleur dans ce que vous faites.
 		</p>
 
 		<section class="border-t border-gray-200 py-8 mt-8">

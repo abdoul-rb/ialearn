@@ -10,18 +10,18 @@
 					</div>
 				</div>
 
-				<nav class="hidden lg:py-3 lg:flex lg:space-x-8" aria-label="Global">
-					<nuxt-link :to="{ name : 'index' }" class="text-gray-900 hover:bg-gray-50 hover:text-gray-900 rounded-md py-2 px-3 inline-flex items-center text-sm font-medium" :class="$route.name === 'index' ? 'bg-gray-100 text-gray-900': ''">
+				<nav class="hidden lg:py-3 lg:flex lg:space-x-3" aria-label="Global">
+					<nuxt-link :to="{ name : 'index' }" class="text-gray-900 hover:bg-gray-50 hover:text-gray-900 rounded-md py-2 px-5 inline-flex items-center text-sm font-medium" :class="$route.name === 'index' ? 'bg-gray-100 text-gray-900': ''">
 						Accueil
 					</nuxt-link>
-					<nuxt-link :to="{ name : 'courses' }" class="text-gray-900 hover:bg-gray-50 hover:text-gray-900 rounded-md py-2 px-3 inline-flex items-center text-sm font-medium" :class="$route.name === 'courses' ? 'bg-gray-100 text-gray-900': ''">
+					<nuxt-link :to="{ name : 'courses' }" class="text-gray-900 hover:bg-gray-50 hover:text-gray-900 rounded-md py-2 px-5 inline-flex items-center text-sm font-medium" :class="$route.name === 'courses' ? 'bg-gray-100 text-gray-900': ''">
 						Cours
 					</nuxt-link>
-					<nuxt-link :to="{ name : 'pro' }" class="text-gray-900 hover:bg-gray-50 hover:text-gray-900 rounded-md py-2 px-3 inline-flex items-center text-sm font-medium" :class="$route.name === 'pro' ? 'bg-gray-100 text-gray-900': ''">
+					<nuxt-link :to="{ name : 'pro' }" class="text-gray-900 hover:bg-gray-50 hover:text-gray-900 rounded-md py-2 px-5 inline-flex items-center text-sm font-medium" :class="$route.name === 'pro' ? 'bg-gray-100 text-gray-900': ''">
 						Université
 					</nuxt-link>
 
-					<nuxt-link :to="{ name : 'forum' }" class="text-gray-900 hover:bg-gray-50 hover:text-gray-900 rounded-md py-2 px-3 inline-flex items-center text-sm font-medium" :class="$route.name === 'forum' ? 'bg-gray-100 text-gray-900': ''">
+					<nuxt-link :to="{ name : 'forum' }" class="text-gray-900 hover:bg-gray-50 hover:text-gray-900 rounded-md py-2 px-5 inline-flex items-center text-sm font-medium" :class="$route.name === 'forum' ? 'bg-gray-100 text-gray-900': ''">
 						Forum
 					</nuxt-link>
 				</nav>
@@ -40,7 +40,7 @@
 				</div>
 	
 				<div class="hidden lg:relative lg:z-10 lg:ml-4 lg:flex lg:items-center gap-x-2">
-					<nuxt-link :to="{ name : 'forum' }" class="text-gray-900 hover:bg-gray-50 hover:text-gray-900 rounded-md py-2 px-3 inline-flex items-center text-sm font-medium" :class="$route.name === 'forum' ? 'bg-gray-100 text-gray-900': ''">
+					<nuxt-link :to="{ name : 'forum' }" class="text-gray-900 hover:bg-gray-50 hover:text-gray-900 rounded-md py-2 px-5 inline-flex items-center text-sm font-medium" :class="$route.name === 'forum' ? 'bg-gray-100 text-gray-900': ''">
 						S'inscrire
 					</nuxt-link>
 
@@ -58,7 +58,7 @@
 								<div v-show="dropdownOpen" class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 py-1 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu" style="display: none;">
 									<nuxt-link :to="{ name : 'app-student-dashboard' }" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Tableau de bord</nuxt-link>
 									<nuxt-link :to="{ name : 'app-student-dashboard' }" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Settings</nuxt-link>
-									<a href="#" @click.prevent="logout" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Déconnexion</a>
+									<a @click.prevent="logout" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Déconnexion</a>
 								</div>
 							</transition>
 						</div>
